@@ -37,9 +37,9 @@ export const Projects = forwardRef<HTMLDivElement>(
         ref={ref}>
           <h2>Full-fledged Operational Projects</h2>
           <div className={styles.projects1}>
-            <VideoPlayer imgLink={CryptPulseImg} vodLink={CryptPulseVod} />
-            <VideoPlayer imgLink={OpusEliteImg} vodLink={OpusEliteVod} />
-            <VideoPlayer imgLink={ComingSoon} vodLink={"null"} />
+            <VideoPlayer imgLink={CryptPulseImg} vodLink={CryptPulseVod} projectLink="https://cryptpulsee.netlify.app"  />
+            <VideoPlayer imgLink={OpusEliteImg} vodLink={OpusEliteVod} projectLink="https://github.com/06bisik03/OpusElite"/>
+            <VideoPlayer imgLink={ComingSoon} vodLink={"null"} projectLink=""/>
           </div>
         </div>
         <div className={styles.templates}>
@@ -49,14 +49,17 @@ export const Projects = forwardRef<HTMLDivElement>(
               <VideoPlayer
                 imgLink={FlavorFusionImg}
                 vodLink={FlavorFusionVod}
+                projectLink="https://flavorfusionn.netlify.app"
               />
-              <VideoPlayer imgLink={KinfusionImg} vodLink={KinfusionVod} />
-              <VideoPlayer imgLink={KinosmeticsImg} vodLink={KinosmeticsVod} />
+              <VideoPlayer imgLink={KinfusionImg} vodLink={KinfusionVod} projectLink="https://kinfusion.netlify.app"/>
+              <VideoPlayer imgLink={KinosmeticsImg} vodLink={KinosmeticsVod}  projectLink="https://kinosmetics.netlify.app"/>
             </div>
             <div className={styles.projects1}>
-              <VideoPlayer imgLink={OmegaImg} vodLink={OmegaVod} />
-              <VideoPlayer imgLink={HipexImg} vodLink={HipexVod} />
-              <VideoPlayer imgLink={ComingSoon} vodLink={"null"} />
+              <VideoPlayer imgLink={OmegaImg} vodLink={OmegaVod} projectLink="https://omegaservers.netlify.app
+
+" />
+              <VideoPlayer imgLink={HipexImg} vodLink={HipexVod} projectLink="https://hipexx.netlify.app"/>
+              <VideoPlayer imgLink={ComingSoon} vodLink={"null"} projectLink=""/>
             </div>
           </div>
         </div>
