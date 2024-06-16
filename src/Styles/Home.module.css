@@ -69,8 +69,11 @@ border-radius: 50%;
   gap: 1.5em;
 }
 .buttonContainer button {
-  width: 18.5%;
+  width: 25%;
   font-size: .95em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: color 0.35s cubic-bezier(0.075, 0.82, 0.165, 1),
     background-color 0.35s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -93,4 +96,47 @@ border-radius: 50%;
     color: orange;
   }
 
+  @media (max-width: 1400px) {
 
+    .homeIntro h3 {
+     font-size: 1.2em;
+    }
+    .homeIntro h2 {
+     font-size: 2em;
+    }
+    .homeIntro h4 {
+     font-size: .9em;
+    }
+    .buttonContainer button {
+     height: 40%;
+     font-size: .85em;
+   }
+   }
+
+@media (max-width: 1020px) {
+  .homeContainer {
+    height: 40vh;
+  }
+ .homeIntro h3 {
+  font-size: 1.1em;
+ }
+ .homeIntro h2 {
+  font-size: 1.75em;
+ }
+ .homeIntro h4 {
+  font-size: .9em;
+ }
+ .buttonContainer {
+  height: 25%;
+  margin-top: 5%;
+}
+ .buttonContainer button {
+  height: 100%;
+  font-size: .6em;
+}
+
+
+}
+@media (max-width: 800px) {
+
+}

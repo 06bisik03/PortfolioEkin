@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                 />
               </svg>
             </div>
-            <a>LinkedIn</a>
+            <a href="https://www.linkedin.com/in/barisekinisik/">LinkedIn</a>
           </div>
           <div className={styles.link}>
             <div>
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
                 />
               </svg>
             </div>
-            <a>Github</a>
+            <a href="https://github.com/06bisik03">Github</a>
           </div>
           <div className={styles.link}>
             <div>
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                 />
               </svg>
             </div>
-            <a>Contact</a>
+            <a href="/contact">Contact</a>
           </div>
         </div>
       </div>

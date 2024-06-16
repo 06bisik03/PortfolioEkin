@@ -1,0 +1,80 @@
+
+.loaderContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+align-self: center;
+    justify-self: center;  place-items: center;
+}
+
+:root {
+  --hue: 223;
+  --bg: hsl(var(--hue), 90%, 95%);
+  --fg: hsl(var(--hue), 90%, 5%);
+  --trans-dur: 0.1s;
+
+}
+
+.ip {
+  width: 12em;
+  display: flex;
+  height: 6em;
+  justify-self: center;
+    align-self: center;
+
+}
+
+.ipTrack {
+  stroke: hsl(var(--hue), 90%, 90%);
+  transition: stroke var(--trans-dur);
+}
+
+.ipWorm1,
+.ipWorm2 {
+  animation: worm1 1s linear infinite;
+}
+
+.ipWorm2 {
+  animation-name: worm2;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(var(--hue), 90%, 5%);
+    --fg: hsl(var(--hue), 90%, 95%);
+  }
+  .ipTrack {
+    stroke: hsl(0, 0%, 13%);
+  }
+}
+
+/* Animation */
+@keyframes worm1 {
+  from {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    animation-timing-function: steps(1);
+    stroke-dashoffset: -358;
+  }
+  50.01% {
+    animation-timing-function: linear;
+    stroke-dashoffset: 358;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes worm2 {
+  from {
+    stroke-dashoffset: 358;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -358;
+  }
+}

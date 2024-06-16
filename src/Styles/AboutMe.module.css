@@ -50,3 +50,37 @@
   line-height: 1.5em;
   box-sizing: border-box;
 }
+@media (max-width: 1020px) {
+  .aboutMeContainer {
+    height: 50vh;
+    margin-top: 10vh;
+    background-color: red;
+  }
+  .aboutMeInfo h2 {
+    height: 10.5vh;
+    font-size: 1.75em;
+  }
+  .aboutMeInfo h5 {
+    height: 24.5vh;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 950px) {
+  .aboutMeContainer {
+    height: 50vh;
+    margin-top: 10vh;
+
+    background-color: aqua;
+  }
+  .aboutMeInfo h2 {
+    height: 10vh;
+    font-size: 1.5em;
+  }
+  .aboutMeInfo h5 {
+    height: 40vh;
+    background-color: violet;
+    color: rgba(255, 255, 255, 0.575);
+    font-size: 0.75em;
+  }
+}

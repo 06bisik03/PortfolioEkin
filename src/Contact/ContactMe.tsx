@@ -3,12 +3,17 @@ import styles from "../Styles/ContactMe.module.css";
 import useForm from "../Hooks/useForm";
 import emailjs from "@emailjs/browser";
 import FormState from "./FormState";
+import Loader from "../Components/Loader";
+
 const ContactMe: React.FC = () => {
   const { inputStates, handleBlur, handleChange, handlePhoneChange, isFilled } =
     useForm();
+  const [loading, setLoading] = useState<boolean>(false);
   const [sentFormState, setSentFormState] = useState<boolean | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
   const handleSubmit = (e: React.FormEvent) => {
+    setLoading(true);
     e.preventDefault();
     const templateParams = {
       from_name: inputStates.name,
@@ -22,9 +27,11 @@ const ContactMe: React.FC = () => {
       })
       .then(
         () => {
+          setLoading(false);
           setSentFormState(true);
         },
         (error) => {
+          setLoading(false);
           setSentFormState(false);
           setErrorMessage(error.text);
         }
@@ -37,10 +44,16 @@ const ContactMe: React.FC = () => {
         Let us embark on a long journey <br /> together
       </h1>
       <h2>Any questions or suggestions are more than welcome.</h2>
-      {sentFormState !== null && (
-        <FormState stateType={sentFormState} stateMessage={errorMessage} />
-      )}
-      {sentFormState === null && (
+      {loading ? (
+        <div className={styles.loaderContainer}>
+          <Loader />
+        </div>
+      ) : sentFormState !== null ? (
+        <FormState
+          stateType={sentFormState}
+          stateMessage={errorMessage || ""}
+        />
+      ) : (
         <form className={styles.formContainer} onSubmit={handleSubmit}>
           <div className={styles.inputGroupContainer1}>
             <div className={styles.inputGroup}>

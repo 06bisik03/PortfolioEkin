@@ -122,3 +122,13 @@
     box-shadow: inset 0px 0px 0px 10em #ff4444;
   }
 }
+
+@media (max-width: 1150px){ 
+  .wrapper h2 {
+    font-size: 1.25em;
+  }
+  .checkmark {
+    margin-top: 15%;
+    height: 50%;
+  }
+}

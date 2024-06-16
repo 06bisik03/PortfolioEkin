@@ -6,15 +6,20 @@
     justify-content: space-between;
     color: orange;
     position: fixed;
-    
+    backdrop-filter: blur(20px);
 
 }
 .navbar_logo {
     width:30%;
-    font-size: 1.75em;
+
     display: flex;
     align-items: center;
+    cursor: pointer;
 
+}
+.navbar_logo img {
+    height:60%;
+    object-fit: contain;
 }
 .navbar_redirect {
     width:50%;
@@ -24,7 +29,7 @@
    
 }
 .navbar_redirect a,.navbar_redirect div {
-    width: 20%;
+    flex:1;
     height:80%;
     display: flex;
     align-items: center;
@@ -37,5 +42,14 @@
 
 .navbar_redirect a:hover,.navbar_redirect div:hover {
     color: orange;
-    letter-spacing: .1em;
+    letter-spacing: .075em;
+}
+
+@media (max-width: 1020px) {
+    .navbar_container {
+        height:7vh;
+    }
+    .navbar_redirect {
+        font-size: .8em;
+    }
 }

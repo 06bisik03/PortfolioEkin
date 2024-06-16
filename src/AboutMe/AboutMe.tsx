@@ -1,9 +1,9 @@
-import React, { forwardRef,useState, useRef } from "react";
+import { forwardRef,useState, useRef } from "react";
 import styles from "../Styles/AboutMe.module.css";
-import ekinImg from "../assets/ekin.png";
+
 import useIntersectionObserver from "../Hooks/useIntersectionObserver";
-interface AboutProp {}
-const AboutMe = forwardRef<HTMLDivElement, AboutProp>((prop, ref) => {
+
+const AboutMe = forwardRef<HTMLDivElement>((_,ref) => {
   const [isVisible, setIsVisible] = useState(false);
   const projectsRef = useRef<HTMLDivElement>(null);
   useIntersectionObserver(projectsRef, setIsVisible);

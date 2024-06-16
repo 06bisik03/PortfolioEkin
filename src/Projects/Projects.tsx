@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import { forwardRef, useState } from "react";
 import styles from "../Styles/Projects.module.css";
 
 import KinfusionVod from "../assets/KinfusionVod.mp4";
@@ -19,9 +19,9 @@ import HipexVod from "../assets/HiPexVod.mp4";
 import VideoPlayer from "./VideoPlayer";
 import { useRef } from "react";
 import useIntersectionObserver from "../Hooks/useIntersectionObserver";
-interface ProjectProps {}
-export const Projects = forwardRef<HTMLDivElement, ProjectProps>(
-  (prop, ref) => {
+
+export const Projects = forwardRef<HTMLDivElement>(
+  (_, ref) => {
     const [isVisible, setIsVisible] = useState(false);
     const projectsRef = useRef<HTMLDivElement>(null);
     useIntersectionObserver(projectsRef, setIsVisible);

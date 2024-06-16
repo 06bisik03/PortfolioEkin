@@ -1,13 +1,13 @@
 import styles from "../Styles/Qualification.module.css";
 import React, { useState, useRef } from "react";
-import useIntersectionObserver  from "../Hooks/useIntersectionObserver";
+import useIntersectionObserver from "../Hooks/useIntersectionObserver";
 import UILogo from "../assets/design.svg";
 import DataLogo from "../assets/database.svg";
 import microsoftLogo from "../assets/microsoft.svg";
 import program from "../assets/program.svg";
 import algo from "../assets/algo.svg";
 import clean from "../assets/clean.svg";
-
+import LazyLoad from "react-lazy-load";
 const MySkills: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const skillsRef = useRef<HTMLDivElement>(null);
@@ -23,7 +23,9 @@ const MySkills: React.FC = () => {
       <div className={styles.carousel}>
         <div className={styles.skillItem}>
           <div className={styles.imageSkill}>
-            <img src={UILogo} />
+            <LazyLoad offset={400}>
+              <img src={UILogo} />
+            </LazyLoad>
           </div>
           <div className={styles.imageSkillInfo}>
             <h4>UI/UX Design</h4>
@@ -35,7 +37,9 @@ const MySkills: React.FC = () => {
         </div>
         <div className={styles.skillItem}>
           <div className={styles.imageSkill}>
-            <img src={clean} />
+            <LazyLoad offset={400}>
+              <img src={clean} />
+            </LazyLoad>
           </div>
           <div className={styles.imageSkillInfo}>
             <h4>Clean Coding</h4>
@@ -47,7 +51,9 @@ const MySkills: React.FC = () => {
         </div>{" "}
         <div className={styles.skillItem}>
           <div className={styles.imageSkill}>
-            <img src={algo} />
+            <LazyLoad offset={400}>
+              <img src={algo} />
+            </LazyLoad>
           </div>
           <div className={styles.imageSkillInfo}>
             <h4>Deep Algorithm Understanding</h4>
@@ -59,7 +65,9 @@ const MySkills: React.FC = () => {
         </div>{" "}
         <div className={styles.skillItem}>
           <div className={styles.imageSkill}>
-            <img src={microsoftLogo} />
+            <LazyLoad offset={400}>
+              <img src={microsoftLogo} />
+            </LazyLoad>
           </div>
           <div className={styles.imageSkillInfo}>
             <h4>Microsoft Office 365 Knowledge</h4>
@@ -68,7 +76,9 @@ const MySkills: React.FC = () => {
         </div>{" "}
         <div className={styles.skillItem}>
           <div className={styles.imageSkill}>
-            <img src={DataLogo} />
+            <LazyLoad offset={400}>
+              <img src={DataLogo} />
+            </LazyLoad>
           </div>
           <div className={styles.imageSkillInfo}>
             <h4>NoSQL Databases</h4>
@@ -80,7 +90,9 @@ const MySkills: React.FC = () => {
         </div>{" "}
         <div className={styles.skillItem}>
           <div className={styles.imageSkill}>
-            <img src={program} />
+            <LazyLoad offset={400}>
+              <img src={program} />
+            </LazyLoad>
           </div>
           <div className={styles.imageSkillInfo}>
             <h4>Multiple Programming Languages</h4>
