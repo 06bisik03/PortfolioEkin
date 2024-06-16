@@ -2,6 +2,7 @@
 body{ 
   font-family: "Poppins", sans-serif;
   background: #202020;
+  overflow-x: hidden;
 }
 h1,h2,h3,h4,h5,h6 {
   padding: 0;
@@ -18,7 +19,8 @@ h1,h2,h3,h4,h5,h6 {
   width:80vw;
   margin-left: 10vw;
   min-height: 100vh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 .contentContainer {
   margin-top: 10vh;

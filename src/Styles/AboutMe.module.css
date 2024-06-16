@@ -1,0 +1,52 @@
+.aboutMeContainer {
+  height: 50vh;
+
+  margin-top: 20vh;
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.visible {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.aboutMeRef {
+  display: flex;
+}
+.aboutMeImg {
+  width: 40%;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.aboutMeImg div {
+  width: 80%;
+}
+.aboutMeInfo {
+  width: 60%;
+  height: 100%;
+  display: grid;
+}
+.aboutMeInfo h2 {
+  height: 15vh;
+  font-size: 2.5em;
+  color: orange;
+}
+.aboutMeInfo h5 {
+  height: 35vh;
+  color: rgba(255, 255, 255, 0.575);
+  font-size: 0.925em;
+
+  line-height: 1.5em;
+  box-sizing: border-box;
+}

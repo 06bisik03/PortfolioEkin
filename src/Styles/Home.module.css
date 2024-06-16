@@ -4,7 +4,20 @@
 margin-top: 5vh;
 
   display: flex;
+  animation: slideInFromLeft 1.15s ease-out forwards;
+  opacity: 0;
 }
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .homeIntro {
   width: 50%;
   height: 50%;
@@ -79,3 +92,5 @@ border-radius: 50%;
 
     color: orange;
   }
+
+

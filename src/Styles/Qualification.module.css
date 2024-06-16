@@ -1,11 +1,28 @@
 .qualificationContainer {
   width: 100%;
-  height: 220vh;
-  margin-top: 25vh;
+  height: 130vh;
+  margin-top: 40vh;
   display: flex;
   flex-direction: column;
-
+  transform: translateX(0%);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
+
+.visible {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .qualificationIntroduction {
   height: 20vh;
   width: 100%;
@@ -116,13 +133,32 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
+}/* MySkills.module.css */
+
 .skills {
   width: 100%;
   height: 90vh;
-  margin-top: 10vh;
-
+  margin-top: 20vh;
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
+
+.visibleSkills {
+  animation: slideInFromLeftSkills 1s ease-out forwards;
+}
+
+
+@keyframes slideInFromLeftSkills {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .skills h2 {
   height: 10vh;
 
