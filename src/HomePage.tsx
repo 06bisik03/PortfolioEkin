@@ -10,11 +10,6 @@ import { Projects } from "./Projects/Projects";
 import AboutMe from "./AboutMe/AboutMe";
 import Footer from "./Contact/Footer";
 import { useSearchParams } from "react-router-dom";
-
-
-
-
-
 const HomePage: React.FC = () => {
   const [searchParams] = useSearchParams();
   const qualiRef = useRef<HTMLDivElement>(null);
@@ -27,6 +22,9 @@ const HomePage: React.FC = () => {
       scrollToQualification(section);
     }
   }, [searchParams]);
+  useEffect(() => {
+    
+  },[window.innerWidth])
   const scrollToQualification = (section: string) => {
     let targetElement: HTMLElement | null = null;
     switch (section) {

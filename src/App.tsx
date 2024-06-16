@@ -7,8 +7,6 @@ import ContactPage from "./ContactPage";
 const App: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    console.log(window.innerHeight, window.innerWidth);
-
   }, []);
   
 
