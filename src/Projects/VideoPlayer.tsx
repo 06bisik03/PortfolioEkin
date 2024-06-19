@@ -19,14 +19,10 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   };
   //"
   return (
-    <LazyLoad
-      offset={400}
-      className={styles.lazy}
-      
-    >
+  
       <a
         href={projectLink === "" ? undefined : projectLink}
-
+        className={styles.lazy}
       >
         <HoverVideoPlayer
         // className={styles.hover}
@@ -61,7 +57,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           }
         />
       </a>
-    </LazyLoad>
+  
   );
 };
 export default VideoPlayer;
