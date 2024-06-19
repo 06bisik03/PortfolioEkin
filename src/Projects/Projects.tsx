@@ -9,7 +9,7 @@ import OmegaVod from "../assets/OmegaVod.mp4";
 import OmegaImg from "../assets/OmegaImg.png";
 import OpusEliteVod from "../assets/OpusEliteVod.mp4";
 import OpusEliteImg from "../assets/OpusEliteImg.png";
-import FlavorFusionVod from "../assets/FlavorFus.mp4";
+import FlavorFusionVod from "../assets/FlavorFusionVod.mp4";
 import FlavorFusionImg from "../assets/FlavorFusionImg.png";
 import CryptPulseVod from "../assets/CryptPulseVod.mp4";
 import CryptPulseImg from "../assets/CryptpulseImg.png";

@@ -49,9 +49,7 @@ const Footer: React.FC = () => {
                 />
               </svg>
             </div>
-            <a href="https://drive.google.com/file/d/1WfY3lqhjLz6sjTTD8RkLKNDUddlWfm2d/view?usp=sharing">
-              Curriculum Vitae
-            </a>
+            <a href="https://drive.google.com/file/d/1WfY3lqhjLz6sjTTD8RkLKNDUddlWfm2d/view?usp=sharing">Curriculum Vitae</a>
           </div>
         </div>
       </div>

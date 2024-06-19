@@ -93,3 +93,24 @@
     height: 60vh;
   }
 }
+@media (max-width: 450px) { 
+  .aboutMeImg {
+    display: none;
+  }
+  .aboutMeContainer {
+    height: 100vh;
+
+  }
+  .aboutMeInfo {
+    width:100%;
+  }
+  .aboutMeInfo h2 {
+    font-size: 1.5em;
+    height: 11.5vh;
+  }
+  .aboutMeInfo h5 {
+    font-weight: 400;
+    font-size: .8em;
+  }
+
+}

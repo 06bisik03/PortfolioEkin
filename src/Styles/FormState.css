@@ -132,3 +132,10 @@
     height: 50%;
   }
 }
+@media (max-width: 450px) {
+  .wrapper h2 {
+    font-size: 1em;
+    height: 15vh;
+    width: 80vw;
+  }
+}

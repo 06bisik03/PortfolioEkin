@@ -63,7 +63,7 @@ export const Qualification = forwardRef<HTMLDivElement>((_, ref) => {
               </LazyLoad>
               <h4>TypeScript</h4>
             </div>
-            <div />{" "}
+            <div className={styles.placeholder}/>
             <div className={styles.lang}>
               <LazyLoad offset={400}>
                 <img src="https://www.svgrepo.com/show/493719/react-javascript-js-framework-facebook.svg" />
@@ -76,7 +76,7 @@ export const Qualification = forwardRef<HTMLDivElement>((_, ref) => {
               </LazyLoad>
               <h4>Git</h4>
             </div>
-            <div />
+            <div className={styles.placeholder}/>
           </div>
         </div>
         <div className={styles.techStackLogosBackend}>
@@ -84,7 +84,7 @@ export const Qualification = forwardRef<HTMLDivElement>((_, ref) => {
           <div className={styles.languagesBackend}>
             <div className={styles.lang}>
               <LazyLoad offset={400}>
-                <img src="https://www.svgrepo.com/show/303658/nodejs-1-logo.svg" />
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-nodejs-1-226034.png?f=webp&w=256" />
               </LazyLoad>
               <h4>Node JS</h4>
             </div>
