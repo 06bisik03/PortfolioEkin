@@ -7,29 +7,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   imgLink,
   projectLink,
 }) => {
-  const [heightVideoDiv, setHeightVideoDiv] = useState<string>("100%");
-  useEffect(() => {
-    // Function to update heightVideoDiv based on window width
-    const handleResize = () => {
-      if (window.innerWidth < 1020) {
-        setHeightVideoDiv('70%');
-      } else if (window.innerWidth <= 650) {
-        setHeightVideoDiv('100%');
-      } else {
-        // Set default height if neither condition is met
-        setHeightVideoDiv('initial'); // You can set initial or another default value
-      }
-      console.log('resize')
-    };
 
-    handleResize();
 
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
   const [hovered, setHovered] = useState<boolean>(false);
   const handleHoverEvent = (type: "enter" | "leave") => {
     if (type === "enter") {
