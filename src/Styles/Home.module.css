@@ -137,6 +137,34 @@ border-radius: 50%;
 
 
 }
-@media (max-width: 800px) {
+@media (max-width: 650px) {
+  .homeContainer {
+    width: 100%;
+    height: 45vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column-reverse;
 
+  }
+  .homeIntro h2, .homeIntro h3, .homeIntro h4 {
+    width: 100%;
+  }
+  .buttonContainer {
+    width: 100%;
+    justify-content: center;
+  }
+  .homeIntro {
+    width: 100%;
+    height: 22.5vh;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .homeHeadshot {
+    width: 50%;
+    height: 22.5vh;
+    display: grid;
+    align-self: center;
+  }
 }

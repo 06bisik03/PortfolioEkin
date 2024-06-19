@@ -54,7 +54,6 @@
   .aboutMeContainer {
     height: 50vh;
     margin-top: 10vh;
-    background-color: red;
   }
   .aboutMeInfo h2 {
     height: 10.5vh;
@@ -70,8 +69,6 @@
   .aboutMeContainer {
     height: 50vh;
     margin-top: 10vh;
-
-    background-color: aqua;
   }
   .aboutMeInfo h2 {
     height: 10vh;
@@ -79,8 +76,20 @@
   }
   .aboutMeInfo h5 {
     height: 40vh;
-    background-color: violet;
+
     color: rgba(255, 255, 255, 0.575);
     font-size: 0.75em;
+  }
+}
+
+@media (max-width: 800px) {
+  .aboutMeInfo h5 {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 650px) {
+  .aboutMeContainer {
+    height: 60vh;
   }
 }

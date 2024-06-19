@@ -8,9 +8,16 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   projectLink,
 }) => {
   const [heightVideoDiv, setHeightVideoDiv] = useState<string>("100%");
+  const [bigScreen, setBigScreen] = useState<boolean>(false);
   useEffect(() => {
     if (window.innerWidth < 1020) {
       setHeightVideoDiv("70%");
+    }
+    if (window.innerWidth <= 650) {
+      setHeightVideoDiv("100%");
+    }
+    if (window.innerWidth > 1020) {
+      setBigScreen(true);
     }
   }, [window.innerWidth]);
   const [hovered, setHovered] = useState<boolean>(false);
@@ -21,9 +28,13 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       setHovered(false);
     }
   };
-
+  //"
   return (
-    <LazyLoad offset={400} height="35vh" width="25vw">
+    <LazyLoad
+      offset={400}
+      height={bigScreen ? "35vh" : ""}
+      width={bigScreen ? "25vw" : ""}
+    >
       <a
         href={projectLink === "" ? undefined : projectLink}
         className={styles.project}

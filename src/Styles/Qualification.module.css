@@ -26,7 +26,6 @@
 .qualificationIntroduction {
   height: 20vh;
   width: 100%;
-
 }
 .qualificationIntroduction h2 {
   font-size: 2em;
@@ -81,7 +80,7 @@
 .techStackLogos h2,
 .techStackLogosBackend h2 {
   font-size: 1.25em;
-  color:#ffa500;
+  color: #ffa500;
   font-weight: 400;
   height: 12.5vh;
   justify-content: center;
@@ -117,7 +116,7 @@
   display: grid;
   grid-template-rows: 70% 30%;
 
-  color:white;
+  color: white;
   font-size: 1.2em;
   justify-content: center;
 }
@@ -133,7 +132,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-}/* MySkills.module.css */
+} /* MySkills.module.css */
 
 .skills {
   width: 100%;
@@ -146,7 +145,6 @@
 .visibleSkills {
   animation: slideInFromLeftSkills 1s ease-out forwards;
 }
-
 
 @keyframes slideInFromLeftSkills {
   from {
@@ -161,7 +159,6 @@
 
 .skills h2 {
   height: 10vh;
-
   font-size: 2em;
   color: orange;
 }
@@ -178,55 +175,54 @@
 .skillItem {
   width: 100%;
   border: solid 1px transparent;
-    color:white;
+  color: white;
   height: 100%;
 
   display: flex;
   flex-direction: column;
   border-radius: 1em;
-    align-items: center;
-    justify-content: center;
-    border: solid 2px white;
-    box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px white;
+  box-sizing: border-box;
 }
 
-.skillItem:nth-of-type(1),.skillItem:nth-of-type(3),.skillItem:nth-of-type(5){
-    border: solid 2px orange;
+.skillItem:nth-of-type(1),
+.skillItem:nth-of-type(3),
+.skillItem:nth-of-type(5) {
+  border: solid 2px orange;
 }
 .imageSkill {
   width: 20%;
   height: 40%;
   display: flex;
 
-    align-self: center;
-    align-items: flex-end;
-   
-
+  align-self: center;
+  align-items: flex-end;
 }
 
 .imageSkillInfo {
-    height:60%;
-    width:100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .skillItem h4 {
-    margin-top: 5%;
-    width: 100%;
-    text-align: center;
-    font-size: clamp(1.5em, 1.65em, 2em); /* Responsive font size using vw units */
-    font-weight: 500;
-    line-height: 1.2; /* Adjust line-height to better fit text */
-    overflow: hidden; /* Ensure any overflow is hidden */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: orange;
-  }
-  
-.skillItem h5 {
+  margin-top: 5%;
+  width: 100%;
+  text-align: center;
+  font-size: 1.75em; /* Responsive font size using vw units */
+  font-weight: 500;
+  line-height: 1.2; /* Adjust line-height to better fit text */
+  overflow: hidden; /* Ensure any overflow is hidden */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: orange;
+}
 
+.skillItem h5 {
   margin-top: 5%;
   width: 85%;
   text-align: center;
@@ -240,8 +236,15 @@
   height: 50%;
   align-self: flex-end;
 }
-
-@media (max-width: 1020px) { 
+@media (max-width: 1300px) {
+  .skillItem h5 {
+    font-size: 0.9em;
+  }
+  .skillItem h4 {
+    font-size: 1.35em;
+  }
+}
+@media (max-width: 1020px) {
   .qualificationContainer {
     margin-top: 20vh;
     height: 100vh;
@@ -249,87 +252,118 @@
   .qualificationIntroduction {
     height: 14vh;
     width: 100%;
-
   }
   .qualificationIntroduction h2 {
     font-size: 1.25em;
   }
   .qualificationIntroduction h3 {
-    font-size: .75em;
-    width:100%;
-}
-.techStack { 
-  height: 12.6vh;
-
-}
-.techStack h1 {
-  font-size: 4.25em;
-
-
-}
-.techStackInfo {
-  font-size: 1em;
-}
-.techStackLanguages {
-  height: 60vh;
-
-
-}
-.techStackLogos h2,
-.techStackLogosBackend h2 {
-  font-size: 1em;
-  height: 8.75vh;
-}
-.techStackLogos {
-  height: 36vh;
-}
-.languages { 
-  height: 25.395vh
-}
-.languages h4,.languagesBackend h4 {
-  font-size: .85em;
-}
-.languagesBackend { 
-  height: 12.1975vh;
-}
-.skills {
-  height: 65vh;
-  margin-top: 5vh;
-}
-.skills h2 { 
-  height: 7vh;
-  font-size: 2em;
-}
-.carousel { 
-  height: 56vh;
-}
-.skillItem h4 {
-  
-  margin-top: 5%;
+    font-size: 0.75em;
     width: 100%;
+  }
+  .techStack {
+    height: 12.6vh;
+  }
+  .techStack h1 {
+    font-size: 4.25em;
+  }
+  .techStackInfo {
+    font-size: 1em;
+  }
+  .techStackLanguages {
+    height: 60vh;
+  }
+  .techStackLogos h2,
+  .techStackLogosBackend h2 {
+    font-size: 1em;
+    height: 8.75vh;
+  }
+  .techStackLogos {
+    height: 36vh;
+  }
+  .languages {
+    height: 25.395vh;
+  }
+  .languages h4,
+  .languagesBackend h4 {
+    font-size: 0.85em;
+  }
+  .languagesBackend {
+    height: 12.1975vh;
+  }
+  .skills {
+    height: 65vh;
+    margin-top: 5vh;
+  }
+  .skills h2 {
+    height: 7vh;
+    font-size: 2em;
+  }
+  .carousel {
+    height: 56vh;
+  }
+  .skillItem h4 {
+    font-size: 1em; /* Responsive font size using vw units */
+  }
+  .skillItem h5 {
+    font-size: 0.75em;
+  }
+}
+@media (max-width: 900px) {
+  .skillItem h5 {
+    font-size: 0.625em;
+  }
+}
+@media (max-width: 650px) {
+  .techStack h1 {
+    font-size: 3em;
+  }
+  .techStackInfo {
+    font-size: 0.85em;
+  }
+
+  .skills {
+    height: 192.5vh;
+  }
+  .skills h2 {
+    height: 12.5vh;
     text-align: center;
-    font-size: clamp(.85em, 1.1em, 2em); /* Responsive font size using vw units */
-    font-weight: 500;
-    line-height: 1.2; /* Adjust line-height to better fit text */
-    overflow: hidden; /* Ensure any overflow is hidden */
+    font-size: 3.5em;
+  }
+
+  .carousel {
+    height: 180vh;
     display: flex;
+    flex-direction: column;
+  }
+  .skillItem {
+    height: 30vh;
+    width: 70%;
+    align-self: center;
+    border: solid 1px transparent;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
     align-items: center;
     justify-content: center;
-    color: orange;
+    border: solid 2px white;
+    box-sizing: border-box;
+  }
+  .imageSkill {
+    width: 20%;
+    height: 40%;
+  }
+
+  .imageSkillInfo {
+    height: 60%;
+  }
+
+  .skillItem h4 {
+    font-size: 1.275em; /* Responsive font size using vw units */
+  }
+
+  .skillItem h5 {
+    font-size: 0.7em;
+  }
 }
 
-.skillItem h5 {
-  font-size: .8em;
-}
-}
-/*
-.qualificationContainer {
-  width: 100%;
-  height: 130vh;
-  margin-top: 40vh;
-  display: flex;
-  flex-direction: column;
-  transform: translateX(0%);
-  opacity: 0;
-  transition: transform 1s ease-out, opacity 1s ease-out;
-} */

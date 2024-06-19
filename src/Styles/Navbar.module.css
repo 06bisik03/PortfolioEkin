@@ -11,7 +11,6 @@
 }
 .navbar_logo {
     width:30%;
-
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -20,6 +19,7 @@
 .navbar_logo img {
     height:60%;
     object-fit: contain;
+
 }
 .navbar_redirect {
     width:50%;
@@ -50,6 +50,13 @@
         height:7vh;
     }
     .navbar_redirect {
+        width:70%;
+
         font-size: .8em;
+    }
+}
+@media (max-width: 650px) {
+    .navbar_redirect {
+        width:70%;
     }
 }
