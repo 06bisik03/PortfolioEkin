@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "../Styles/Projects.module.css";
 import HoverVideoPlayer from "react-hover-video-player";
 import LazyLoad from "react-lazy-load";
