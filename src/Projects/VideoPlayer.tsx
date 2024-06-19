@@ -8,18 +8,28 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   projectLink,
 }) => {
   const [heightVideoDiv, setHeightVideoDiv] = useState<string>("100%");
-  const [bigScreen, setBigScreen] = useState<boolean>(false);
   useEffect(() => {
-    if (window.innerWidth < 1020) {
-      setHeightVideoDiv("70%");
-    }
-    if (window.innerWidth <= 650) {
-      setHeightVideoDiv("100%");
-    }
-    if (window.innerWidth > 1020) {
-      setBigScreen(true);
-    }
-  }, [window.innerWidth]);
+    // Function to update heightVideoDiv based on window width
+    const handleResize = () => {
+      if (window.innerWidth < 1020) {
+        setHeightVideoDiv('70%');
+      } else if (window.innerWidth <= 650) {
+        setHeightVideoDiv('100%');
+      } else {
+        // Set default height if neither condition is met
+        setHeightVideoDiv('initial'); // You can set initial or another default value
+      }
+      console.log('resize')
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const [hovered, setHovered] = useState<boolean>(false);
   const handleHoverEvent = (type: "enter" | "leave") => {
     if (type === "enter") {
@@ -32,14 +42,15 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   return (
     <LazyLoad
       offset={400}
-      height={bigScreen ? "35vh" : ""}
-      width={bigScreen ? "25vw" : ""}
+      className={styles.lazy}
+      
     >
       <a
         href={projectLink === "" ? undefined : projectLink}
-        className={styles.project}
+
       >
         <HoverVideoPlayer
+        // className={styles.hover}
           videoSrc={vodLink}
           restartOnPaused
           onMouseEnter={() => handleHoverEvent("enter")}
@@ -51,14 +62,14 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               style={{
                 // Make the image expand to cover the video's dimensions
                 width: "100%",
-                height: heightVideoDiv,
+                height: "100%",
                 objectFit: "cover",
               }}
             />
           }
           style={{
             width: "100%",
-            height: "70%",
+            height: "100%",
             alignSelf: "center",
             transform: hovered ? "scale(1.1)" : "none",
             transformOrigin: "top center",

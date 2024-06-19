@@ -41,12 +41,18 @@ export const Projects = forwardRef<HTMLDivElement>((_, ref) => {
             vodLink={CryptPulseVod}
             projectLink="https://cryptpulsee.netlify.app"
           />
+
           <VideoPlayer
             imgLink={OpusEliteImg}
             vodLink={OpusEliteVod}
             projectLink="https://github.com/06bisik03/OpusElite"
           />
-          <VideoPlayer imgLink={ComingSoon} vodLink={ComingSoonVod} projectLink="" />
+
+          <VideoPlayer
+            imgLink={ComingSoon}
+            vodLink={ComingSoonVod}
+            projectLink=""
+          />
         </div>
       </div>
       <div className={styles.templates}>
@@ -82,7 +88,11 @@ export const Projects = forwardRef<HTMLDivElement>((_, ref) => {
               vodLink={HipexVod}
               projectLink="https://hipexx.netlify.app"
             />
-            <VideoPlayer imgLink={ComingSoon} vodLink={ComingSoonVod} projectLink="" />
+            <VideoPlayer
+              imgLink={ComingSoon}
+              vodLink={ComingSoonVod}
+              projectLink=""
+            />
           </div>
         </div>
       </div>
