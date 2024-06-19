@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "../Styles/Projects.module.css";
 import HoverVideoPlayer from "react-hover-video-player";
-import LazyLoad from "react-lazy-load";
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
   vodLink,
   imgLink,
