@@ -30,7 +30,7 @@
 .qualificationIntroduction h2 {
   font-size: 2em;
   height: 30%;
-  color: orange;
+  color: #ffa500;
 }
 .qualificationIntroduction h3 {
   width: 100%;
@@ -52,7 +52,7 @@
   display: flex;
   justify-content: center;
 
-  color: orange;
+  color: #ffa500;
 }
 .techStackInfo {
   width: 85%;
@@ -67,7 +67,7 @@
   height: 102vh;
 
   display: grid;
-  color: black;
+  color: #000000;
 }
 .techStackLogos {
   width: 100%;
@@ -116,7 +116,7 @@
   display: grid;
   grid-template-rows: 70% 30%;
 
-  color: white;
+  color: #ffffff;
   font-size: 1.2em;
   justify-content: center;
 }
@@ -160,7 +160,7 @@
 .skills h2 {
   height: 10vh;
   font-size: 2em;
-  color: orange;
+  color: #ffa500;
 }
 .carousel {
   height: 80vh;
@@ -175,7 +175,7 @@
 .skillItem {
   width: 100%;
   border: solid 1px transparent;
-  color: white;
+  color: #ffffff;
   height: 100%;
 
   display: flex;
@@ -183,14 +183,14 @@
   border-radius: 1em;
   align-items: center;
   justify-content: center;
-  border: solid 2px white;
+  border: solid 2px #ffffff;
   box-sizing: border-box;
 }
 
 .skillItem:nth-of-type(1),
 .skillItem:nth-of-type(3),
 .skillItem:nth-of-type(5) {
-  border: solid 2px orange;
+  border: solid 2px #ffa500;
 }
 .imageSkill {
   width: 20%;
@@ -219,7 +219,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: orange;
+  color: #ffa500;
 }
 
 .skillItem h5 {
@@ -340,13 +340,13 @@
     width: 70%;
     align-self: center;
     border: solid 1px transparent;
-    color: white;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     border-radius: 1em;
     align-items: center;
     justify-content: center;
-    border: solid 2px white;
+    border: solid 2px #ffffff;
     box-sizing: border-box;
   }
   .imageSkill {
@@ -382,7 +382,7 @@
     font-size: 1.5em;
     height: 20%;
 
-    color: orange;
+    color: #ffa500;
   }
   .qualificationIntroduction h3 {
     font-size: .9em;
@@ -402,7 +402,7 @@
   font-size: 3.5em;
   width: 30%;
 
-  color: orange;
+  color: #ffa500;
 }
 .techStackInfo {
   width: 70%;
@@ -465,7 +465,7 @@
   display: grid;
   grid-template-rows: 70% 30%;
 
-  color: white;
+  color: #ffffff;
   font-size: .8em;
   justify-content: center;
 }
@@ -512,7 +512,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: orange;
+  color: #ffa500;
 }
 
 .skillItem h5 {

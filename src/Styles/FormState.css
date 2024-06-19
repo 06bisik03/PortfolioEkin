@@ -21,7 +21,7 @@
   height: 15vh;
   width:100%;
   font-size: 1.75em;
-  color:white;
+  color:#ffffff;
 
 }
 
@@ -30,7 +30,7 @@
   stroke-dashoffset: 166;
   stroke-width: 5px;
   stroke-miterlimit: 10;
-  stroke: orange;
+  stroke: #ffa500;
   animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
 }
 
@@ -50,12 +50,12 @@
   border-radius: 50%;
   display: block;
   stroke-width: 5px;
-  stroke: rgb(255, 255, 255);
+  stroke: #ffffff;
   stroke-miterlimit: 10;
 
 }
 .checkmark.success {
-  box-shadow: inset 0px 0px 0px orange;
+  box-shadow: inset 0px 0px 0px #ffa500;
   animation: fillsuccess 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
 }
 .checkmark.error {
@@ -72,7 +72,7 @@
 
 .progress {
   transform: rotate(-90deg);
-  stroke: black;
+  stroke: #000000;
 }
 
 .progress circle {
@@ -114,7 +114,7 @@
 }
 @keyframes fillsuccess {
   100% {
-    box-shadow: inset 0px 0px 0px 10em orange;
+    box-shadow: inset 0px 0px 0px 10em #ffa500;
   }
 }
 @keyframes fillerror {

@@ -6,7 +6,7 @@
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  background-color: orange;
+  background-color: #ffa500;
   gap: 2.5vh;
   opacity: 0;
   transform: scaleX(0);
@@ -37,8 +37,8 @@
   align-items: center;
   font-size: 1.2em;
   font-weight: 200;
-  color: white;
-  border: 1px solid white;
+  color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 0.25em;
   cursor: pointer;
   text-align: center; /* Ensure text is centered */
@@ -46,8 +46,8 @@
 }
 
 .formLink a:hover {
-  background-color: white;
-  color: rgb(255, 165, 0);
+  background-color: #ffffff;
+  color: #ffa500;
   display: flex;
   text-align: center;
   letter-spacing: 0.5em;
@@ -58,7 +58,7 @@
   height: 35vh;
   display: flex;
   margin-top: 20vh;
-  border-top: 1px solid rgba(255, 255, 255, 0.191);
+  border-top: 1px solid #ffffff31;
 }
 
 .links {
@@ -97,7 +97,7 @@
 .link a,
 .contactDetail a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.535);
+  color: #ffffff88;
   cursor: pointer;
   font-weight: 300;
   transition: color 0.3s ease-in-out;
@@ -106,10 +106,10 @@
   cursor: default;
 }
 .contactDetail a:hover {
-  color: rgba(255, 255, 255, 0.535);
+  color: #ffffff88;
 }
 .link a:hover {
-  color: orange;
+  color: #ffa500;
 }
 
 .link div,
@@ -206,18 +206,18 @@
 .buttonHolder button {
   width: 40%;
   height: 100%;
-  color: orange;
+  color: #ffa500;
   background-color: transparent;
-  border: 1px solid orange;
+  border: 1px solid #ffa500;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 .buttonHolder button:hover {
-  background-color: orange;
-  color: white;
-  border: 1px solid orange;
+  background-color: #ffa500;
+  color: #ffffff;
+  border: 1px solid #ffa500;
 }
 
 .inputGroup,
@@ -267,7 +267,7 @@
   padding: 1em 0.5em;
   border-radius: 0.25em;
   background-color: transparent;
-  color: white;
+  color: #ffffff;
   outline: none;
   transition: all 0.3s ease;
 }
@@ -275,7 +275,7 @@
 .inputGroup input:focus,
 .inputGroup21 input:focus,
 .inputGroup22 textarea:focus {
-  border-color: orange;
+  border-color: #ffa500;
   background-color: transparent;
 }
 
@@ -304,13 +304,13 @@
   transform: translateY(-50%) translateX(0.5em);
   background-color: #202020;
   font-size: 0.75em;
-  color: orange;
+  color: #ffa500;
 }
 
 .inputGroup input:not(:focus):not(:placeholder-shown) + label,
 .inputGroup21 input:not(:focus):not(:placeholder-shown) + label,
 .inputGroup22 textarea:not(:focus):not(:placeholder-shown) + label {
-  color: white;
+  color: #ffffff;
 }
 @media (max-width: 1150px) {
   .contactFormContainer {
