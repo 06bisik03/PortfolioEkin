@@ -16,32 +16,49 @@ const AboutMe = forwardRef<HTMLDivElement>((_,ref) => {
         <div className={styles.aboutMeImg}></div>
         <div className={styles.aboutMeInfo}>
           <h2>
-            About Me, <br />
-            I'm Baris Ekin ISIK, <br />
+            About Me <br />
+             
           </h2>
           <h5>
-            <p>
-              {" "}
-              I am a 21-year-old Turkish software developer. I first encountered
-              programming thanks to my IT teacher in high school, who showed me
-              how to create interactive websites using HTML and CSS. Since then,
-              I have advanced on my own and learned JavaScript to build small
-              applications, such as a calculator, which was my first-ever
-              programming project and is also available on my GitHub account.
-            </p>
-            <p>
-              After having worked for almost a year and a half I have been fortunate enough to learn a lot of things and elevate my programming skills to another dimension. Writing code that is more efficient and more readable is not as challenging as it used to be before. Combining the knowledge I had before working and experience I have gained while working, has enabled me to combine the two to make me a better programmer overall and always strive for better. Hence, I always refuse to settle for mediocre when I can always make something better.
-            </p>
+  <p>
+    I'm a 21-year-old Turkish software developer and 3rd-semester Computer
+    Science student with over a year and a half of professional experience.
+    I build with TypeScript, React, Next.js, Node.js, Express, and SQL —
+    and I care as much about the product as I do about the code behind it.
+  </p>
 
-            <p>
-              {" "}
-              When I am not coding, I am almost always playing the guitar,
-              writing, and composing my own songs with the help of Cubase and FL
-              Studio. I enjoy listening to new songs regardless of genre and
-              jamming with others from my dorm almost every afternoon in our
-              music room.
-            </p>
-          </h5>
+  <p>
+    My path into programming started with a single moment: my high school
+    IT teacher wrote a piece of Java code (Dijkstra's Algorithm) on the smartboard that found the
+    shortest path between two points — and it traced the exact route I
+    walked home every day. That was it for me. I had to understand how
+    that was possible, and I never stopped.
+  </p>
+
+  <p>
+    Since then, I've contributed to production at a professional level —
+    including building the contact page for Cinemo's corporate website and many more.
+  </p>
+
+  <p>
+    What drives me isn't just writing code that works — it's building
+    things that feel inevitable. Clean, efficient, and thought through
+    to the last detail.
+  </p>
+
+  <p>
+    I'm currently open to junior developer (Working Student) positions where I can bring
+    both technical depth and product instinct to a team that builds
+    things that matter.
+  </p>
+
+  <p>
+    Outside of code, I'm a guitarist and music producer — I write and
+    compose my own songs using Cubase and FL Studio, and spend most
+    evenings jamming with friends. It's how I stay creative, and
+    creativity is something I bring into everything I build.
+  </p>
+</h5>
         </div>
       </div>
     </div>
