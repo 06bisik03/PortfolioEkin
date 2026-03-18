@@ -22,7 +22,7 @@ const AboutMe = forwardRef<HTMLDivElement>((_,ref) => {
           <h5>
             <p>
               {" "}
-              I am a 20-year-old Turkish software developer. I first encountered
+              I am a 21-year-old Turkish software developer. I first encountered
               programming thanks to my IT teacher in high school, who showed me
               how to create interactive websites using HTML and CSS. Since then,
               I have advanced on my own and learned JavaScript to build small
@@ -30,10 +30,7 @@ const AboutMe = forwardRef<HTMLDivElement>((_,ref) => {
               programming project and is also available on my GitHub account.
             </p>
             <p>
-              Although I have no real-life industry experience, I have honed my
-              skills over the last six years with self-made projects ranging
-              from simple frontend templates to full-stack websites. I am also
-              actively applying for new jobs and internships.
+              After having worked for almost a year and a half I have been fortunate enough to learn a lot of things and elevate my programming skills to another dimension. Writing code that is more efficient and more readable is not as challenging as it used to be before. Combining the knowledge I had before working and experience I have gained while working, has enabled me to combine the two to make me a better programmer overall and always strive for better. Hence, I always refuse to settle for mediocre when I can always make something better.
             </p>
 
             <p>

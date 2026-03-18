@@ -65,6 +65,8 @@ const HomePage: React.FC = () => {
     <>
       <div className={styles.appContainer}>
         <Navbar scrollToRef={scrollToQualification} />
+
+
         <div className={styles.contentContainer}>
           <Home ref={homeRef} />
           <Qualification ref={qualiRef} />

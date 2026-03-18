@@ -1,16 +1,22 @@
 .navbar_container {
-    width:85vw;
+    width:100vw;
     height:10vh;
     z-index: 1000;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     color: #ffa500;
     position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 10vw;
+    box-sizing: border-box;
     backdrop-filter: blur(20px);
-
+    background: rgba(33, 33, 33, 0.35);
 }
 .navbar_logo {
-    width:30%;
+    width:auto;
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -18,22 +24,26 @@
 }
 .navbar_logo img {
     height:60%;
+    max-height: 3.25rem;
     object-fit: contain;
 
 }
 .navbar_redirect {
-    width:50%;
+    width:auto;
+    min-width:min(32rem, 52vw);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: clamp(0.5rem, 1.5vw, 1.5rem);
    
 }
 .navbar_redirect a,.navbar_redirect div {
-    flex:1;
-    height:80%;
+    flex:0 1 auto;
+    height:auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0.75rem 0.25rem;
     color:#ffffff;
     transition: color .35s cubic-bezier(0.075, 0.82, 0.165, 1),letter-spacing .3s ease-in-out;
     cursor: pointer;
@@ -48,29 +58,33 @@
 @media (max-width: 1020px) {
     .navbar_container {
         height:7vh;
+        padding: 0 6vw;
     }
     .navbar_redirect {
-        width:70%;
-
         font-size: .8em;
+        min-width:min(30rem, 62vw);
     }
 }
 @media (max-width: 650px) {
     .navbar_redirect {
-        width:70%;
+        min-width:min(24rem, 68vw);
     }
 }
 @media (max-width: 450px)  {
+    .navbar_container {
+        padding: 0 4vw;
+    }
     .navbar_logo {
-        width:30%;
+        width:auto;
 
     }
     .navbar_logo img {
         max-width: 100%;
-        max-height: 100%;
+        max-height: 2rem;
     }
     .navbar_redirect {
-        width:60%;
         font-size: .45em;
+        min-width:min(15rem, 70vw);
+        gap: .2rem;
     }
 }
