@@ -39,13 +39,13 @@ export const Projects = forwardRef<HTMLDivElement>((_, ref) => {
           <VideoPlayer
             imgLink={CryptPulseImg}
             vodLink={CryptPulseVod}
-            projectLink="https://cryptpulsee.netlify.app"
+            projectLink="https://crypt-pulse.netlify.app/"
           />
 
           <VideoPlayer
             imgLink={OpusEliteImg}
             vodLink={OpusEliteVod}
-            projectLink="https://github.com/06bisik03/OpusElite"
+            projectLink="https://opuselite.netlify.app/"
           />
 
           <VideoPlayer
