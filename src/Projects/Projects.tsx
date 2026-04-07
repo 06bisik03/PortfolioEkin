@@ -1,6 +1,6 @@
 import { forwardRef, useState } from "react";
 import styles from "../Styles/Projects.module.css";
-
+import CodeCoach from "../assets/codecoach.png";
 import KinfusionVod from "../assets/KinfusionVod.mp4";
 import KinfusionImg from "../assets/Kinfusion.png";
 import KinosmeticsVod from "../assets/KinosmeticsVod.mp4";
@@ -49,9 +49,9 @@ export const Projects = forwardRef<HTMLDivElement>((_, ref) => {
           />
 
           <VideoPlayer
-            imgLink={ComingSoon}
+            imgLink={CodeCoach}
             vodLink={ComingSoonVod}
-            projectLink=""
+            projectLink="https://code-coach-beta.vercel.app/"
           />
         </div>
       </div>
