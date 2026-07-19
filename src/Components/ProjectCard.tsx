@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState } from "react";
+import TechnologyIcon, { type TechnologyId } from "./TechnologyIcon";
 
-interface ProjectCardProps {
+export interface ProjectTechnology {
+  id: TechnologyId;
+  label: string;
+}
+
+export interface ProjectCardProps {
   title: string;
   category: string;
   description: string;
@@ -9,6 +15,7 @@ interface ProjectCardProps {
   number: string;
   video?: string;
   featured?: boolean;
+  technologies: readonly ProjectTechnology[];
 }
 
 const ProjectCard = ({
@@ -20,6 +27,7 @@ const ProjectCard = ({
   number,
   video,
   featured = false,
+  technologies,
 }: ProjectCardProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoReady, setVideoReady] = useState(false);
@@ -102,6 +110,20 @@ const ProjectCard = ({
           <h3>{title}</h3>
         </div>
         <p>{description}</p>
+        <div className="project-stack" aria-label={`${title} technology stack`}>
+          <div className="project-stack-heading" aria-hidden="true">
+            <span>Build signature</span>
+            <span>{String(technologies.length).padStart(2, "0")}</span>
+          </div>
+          <ul>
+            {technologies.map((technology) => (
+              <li key={`${title}-${technology.id}`}>
+                <TechnologyIcon technology={technology.id} />
+                <span>{technology.label}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
         <a href={href} target="_blank" rel="noreferrer" aria-label={`Visit ${title}`}>
           Visit project <span aria-hidden="true">↗</span>
         </a>

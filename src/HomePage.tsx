@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import ProjectCard from "./Components/ProjectCard";
+import ProjectCard, { type ProjectCardProps } from "./Components/ProjectCard";
 import SiteFooter from "./Components/SiteFooter";
 import SiteHeader from "./Components/SiteHeader";
 import codeCoachPoster from "./assets/optimized/codecoach.webp";
@@ -21,7 +21,7 @@ import omegaServersVideo from "./assets/optimized/omegaservers-showcase.mp4";
 import opusElitePoster from "./assets/optimized/opuselite-showcase-poster.webp";
 import opusEliteVideo from "./assets/optimized/opuselite-showcase.mp4";
 
-const projects = [
+const projects: Array<Omit<ProjectCardProps, "featured" | "number">> = [
   {
     title: "CryptPulse",
     category: "Crypto analytics · Product build",
@@ -30,6 +30,16 @@ const projects = [
     image: cryptPulsePoster,
     video: cryptPulseVideo,
     href: "https://crypt-pulse.netlify.app/",
+    technologies: [
+      { id: "react", label: "React" },
+      { id: "javascript", label: "JavaScript" },
+      { id: "css", label: "CSS Modules" },
+      { id: "redux", label: "Redux Toolkit" },
+      { id: "chart", label: "Recharts" },
+      { id: "firebase", label: "Firebase Realtime DB" },
+      { id: "api", label: "CoinGecko API" },
+      { id: "netlify", label: "Netlify" },
+    ],
   },
   {
     title: "CodeCoach",
@@ -38,6 +48,16 @@ const projects = [
       "A guided coding environment designed to turn practice into visible, motivating progress.",
     image: codeCoachPoster,
     href: "https://code-coach-beta.vercel.app/",
+    technologies: [
+      { id: "nextjs", label: "Next.js" },
+      { id: "react", label: "React" },
+      { id: "typescript", label: "TypeScript" },
+      { id: "tailwind", label: "Tailwind CSS" },
+      { id: "prisma", label: "Prisma" },
+      { id: "postgresql", label: "PostgreSQL" },
+      { id: "openai", label: "OpenAI API" },
+      { id: "vercel", label: "Vercel" },
+    ],
   },
   {
     title: "Kinfusion",
@@ -47,6 +67,12 @@ const projects = [
     image: kinfusionPoster,
     video: kinfusionVideo,
     href: "https://kinfusion.netlify.app",
+    technologies: [
+      { id: "react", label: "React" },
+      { id: "javascript", label: "JavaScript" },
+      { id: "css", label: "CSS Modules" },
+      { id: "netlify", label: "Netlify" },
+    ],
   },
   {
     title: "Kinosmetics",
@@ -56,6 +82,14 @@ const projects = [
     image: kinosmeticsPoster,
     video: kinosmeticsVideo,
     href: "https://kinosmetics.netlify.app",
+    technologies: [
+      { id: "react", label: "React" },
+      { id: "javascript", label: "JavaScript" },
+      { id: "css", label: "CSS Modules" },
+      { id: "react-router", label: "React Router" },
+      { id: "swiper", label: "Swiper" },
+      { id: "netlify", label: "Netlify" },
+    ],
   },
   {
     title: "FlavorFusion",
@@ -65,6 +99,13 @@ const projects = [
     image: flavorFusionPoster,
     video: flavorFusionVideo,
     href: "https://flavorfusionn.netlify.app",
+    technologies: [
+      { id: "react", label: "React" },
+      { id: "javascript", label: "JavaScript" },
+      { id: "css", label: "CSS Modules" },
+      { id: "react-router", label: "React Router" },
+      { id: "netlify", label: "Netlify" },
+    ],
   },
   {
     title: "HiPex",
@@ -74,6 +115,13 @@ const projects = [
     image: hiPexPoster,
     video: hiPexVideo,
     href: "https://hipexx.netlify.app",
+    technologies: [
+      { id: "react", label: "React" },
+      { id: "javascript", label: "JavaScript" },
+      { id: "css", label: "CSS Modules" },
+      { id: "swiper", label: "Swiper" },
+      { id: "netlify", label: "Netlify" },
+    ],
   },
   {
     title: "OmegaServers",
@@ -83,6 +131,14 @@ const projects = [
     image: omegaServersPoster,
     video: omegaServersVideo,
     href: "https://omegaservers.netlify.app",
+    technologies: [
+      { id: "react", label: "React" },
+      { id: "javascript", label: "JavaScript" },
+      { id: "css", label: "CSS Modules" },
+      { id: "react-router", label: "React Router" },
+      { id: "swiper", label: "Swiper" },
+      { id: "netlify", label: "Netlify" },
+    ],
   },
   {
     title: "Gotham Books",
@@ -92,6 +148,15 @@ const projects = [
     image: gothamBooksPoster,
     video: gothamBooksVideo,
     href: "https://github.com/06bisik03/GothamBooks",
+    technologies: [
+      { id: "react", label: "React" },
+      { id: "javascript", label: "JavaScript" },
+      { id: "sass", label: "Sass" },
+      { id: "react-router", label: "React Router" },
+      { id: "browser-storage", label: "Browser storage" },
+      { id: "api", label: "Open Library API" },
+      { id: "github", label: "GitHub" },
+    ],
   },
 ];
 
@@ -279,6 +344,15 @@ const HomePage = () => {
               image={opusElitePoster}
               video={opusEliteVideo}
               href="https://opuselite.netlify.app/"
+              technologies={[
+                { id: "react", label: "React" },
+                { id: "javascript", label: "JavaScript" },
+                { id: "css", label: "CSS Modules" },
+                { id: "nodejs", label: "Node.js" },
+                { id: "express", label: "Express" },
+                { id: "mongodb", label: "MongoDB" },
+                { id: "netlify", label: "Netlify Functions" },
+              ]}
               featured
               number="01"
             />
