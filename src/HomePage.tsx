@@ -14,6 +14,8 @@ import kinfusionPoster from "./assets/optimized/kinfusion.webp";
 import kinfusionVideo from "./assets/optimized/kinfusion-showcase.mp4";
 import kinosmeticsPoster from "./assets/optimized/kinosmetics.webp";
 import kinosmeticsVideo from "./assets/optimized/kinosmetics-showcase.mp4";
+import omegaServersPoster from "./assets/optimized/omegaservers.webp";
+import omegaServersVideo from "./assets/optimized/omegaservers-showcase.mp4";
 import opusElitePoster from "./assets/optimized/opuselite-showcase-poster.webp";
 import opusEliteVideo from "./assets/optimized/opuselite-showcase.mp4";
 
@@ -70,6 +72,15 @@ const projects = [
     image: hiPexPoster,
     video: hiPexVideo,
     href: "https://hipexx.netlify.app",
+  },
+  {
+    title: "OmegaServers",
+    category: "Cloud security · Frontend",
+    description:
+      "A high-trust infrastructure concept that turns complex cloud protection into a precise, confident product experience.",
+    image: omegaServersPoster,
+    video: omegaServersVideo,
+    href: "https://omegaservers.netlify.app",
   },
 ];
 
