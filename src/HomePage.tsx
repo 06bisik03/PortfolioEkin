@@ -10,7 +10,7 @@ import hiPexPoster from "./assets/optimized/hipex.webp";
 import hiPexVideo from "./assets/optimized/hipex-showcase.mp4";
 import kinfusionPoster from "./assets/optimized/kinfusion.webp";
 import kinosmeticsPoster from "./assets/optimized/kinosmetics.webp";
-import opusElitePoster from "./assets/optimized/opuselite-showcase-poster.jpg";
+import opusElitePoster from "./assets/optimized/opuselite-showcase-poster.webp";
 import opusEliteVideo from "./assets/optimized/opuselite-showcase.mp4";
 
 const projects = [
