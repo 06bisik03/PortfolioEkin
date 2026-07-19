@@ -7,6 +7,7 @@ import cryptPulsePoster from "./assets/optimized/cryptpulse.webp";
 import portrait from "./assets/optimized/ekin-portrait.webp";
 import flavorFusionPoster from "./assets/optimized/flavorfusion.webp";
 import hiPexPoster from "./assets/optimized/hipex.webp";
+import hiPexVideo from "./assets/optimized/hipex-showcase.mp4";
 import kinfusionPoster from "./assets/optimized/kinfusion.webp";
 import kinosmeticsPoster from "./assets/optimized/kinosmetics.webp";
 import opusElitePoster from "./assets/optimized/opuselite-showcase-poster.jpg";
@@ -57,8 +58,9 @@ const projects = [
     title: "HiPex",
     category: "Digital concept · Frontend",
     description:
-      "A high-contrast web concept exploring bold typography, pace, and interaction.",
+      "A private-estates concept shaped by cinematic imagery, restrained typography, and quietly confident interaction.",
     image: hiPexPoster,
+    video: hiPexVideo,
     href: "https://hipexx.netlify.app",
   },
 ];
