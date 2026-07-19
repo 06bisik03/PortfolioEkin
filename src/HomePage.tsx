@@ -4,6 +4,7 @@ import SiteFooter from "./Components/SiteFooter";
 import SiteHeader from "./Components/SiteHeader";
 import codeCoachPoster from "./assets/optimized/codecoach.webp";
 import cryptPulsePoster from "./assets/optimized/cryptpulse.webp";
+import cryptPulseVideo from "./assets/optimized/cryptpulse-showcase.mp4";
 import portrait from "./assets/optimized/ekin-portrait.webp";
 import flavorFusionPoster from "./assets/optimized/flavorfusion.webp";
 import hiPexPoster from "./assets/optimized/hipex.webp";
@@ -22,6 +23,7 @@ const projects = [
     description:
       "A focused market intelligence experience that makes live crypto data feel clear and immediate.",
     image: cryptPulsePoster,
+    video: cryptPulseVideo,
     href: "https://crypt-pulse.netlify.app/",
   },
   {
