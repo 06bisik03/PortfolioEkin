@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { type CSSProperties, useEffect, useRef, useState } from "react";
 import TechnologyIcon, { type TechnologyId } from "./TechnologyIcon";
 
 export interface ProjectTechnology {
@@ -17,6 +17,14 @@ export interface ProjectCardProps {
   featured?: boolean;
   technologies: readonly ProjectTechnology[];
 }
+
+const technologyMotionStyle = (index: number) =>
+  ({
+    "--tech-reveal-delay": `${(0.18 + index * 0.075).toFixed(3)}s`,
+    "--tech-drift-delay": `${(1.25 + index * 0.21).toFixed(2)}s`,
+    "--tech-sheen-delay": `${(index * 0.42).toFixed(2)}s`,
+    "--tech-icon-delay": `${(index * -0.55).toFixed(2)}s`,
+  }) as CSSProperties;
 
 const ProjectCard = ({
   title,
@@ -116,8 +124,8 @@ const ProjectCard = ({
             <span>{String(technologies.length).padStart(2, "0")}</span>
           </div>
           <ul>
-            {technologies.map((technology) => (
-              <li key={`${title}-${technology.id}`}>
+            {technologies.map((technology, index) => (
+              <li key={`${title}-${technology.id}`} style={technologyMotionStyle(index)}>
                 <TechnologyIcon technology={technology.id} />
                 <span>{technology.label}</span>
               </li>
