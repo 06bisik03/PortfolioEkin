@@ -207,8 +207,6 @@ const HomePage = () => {
 
       <main>
         <section className="hero" id="home">
-          <div className="hero-orbit hero-orbit-one" aria-hidden="true" />
-          <div className="hero-orbit hero-orbit-two" aria-hidden="true" />
           <div className="hero-copy">
             <p className="eyebrow hero-eyebrow">Software engineer · Aachen, Germany</p>
             <h1>
@@ -231,7 +229,15 @@ const HomePage = () => {
           </div>
 
           <div className="hero-portrait" aria-label="Portrait of Baris Ekin Isik">
+            <div className="portrait-kinetic" aria-hidden="true">
+              <span className="kinetic-track kinetic-track-outer"><i /></span>
+              <span className="kinetic-track kinetic-track-middle"><i /></span>
+              <span className="kinetic-track kinetic-track-inner"><i /></span>
+              <span className="kinetic-axis kinetic-axis-horizontal" />
+              <span className="kinetic-axis kinetic-axis-diagonal" />
+            </div>
             <div className="portrait-frame">
+              <div className="portrait-field" aria-hidden="true" />
               <div className="portrait-glow" aria-hidden="true" />
               <img
                 src={portrait}
