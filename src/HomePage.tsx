@@ -7,6 +7,7 @@ import cryptPulsePoster from "./assets/optimized/cryptpulse.webp";
 import cryptPulseVideo from "./assets/optimized/cryptpulse-showcase.mp4";
 import portrait from "./assets/optimized/ekin-portrait.webp";
 import flavorFusionPoster from "./assets/optimized/flavorfusion.webp";
+import flavorFusionVideo from "./assets/optimized/flavorfusion-showcase.mp4";
 import hiPexPoster from "./assets/optimized/hipex.webp";
 import hiPexVideo from "./assets/optimized/hipex-showcase.mp4";
 import kinfusionPoster from "./assets/optimized/kinfusion.webp";
@@ -54,10 +55,11 @@ const projects = [
   },
   {
     title: "FlavorFusion",
-    category: "Food discovery · Interface design",
+    category: "Contemporary dining · Interface design",
     description:
-      "A lively recipe experience that balances rich imagery with calm, practical navigation.",
+      "A cinematic restaurant experience where restrained interaction lets the ingredients and atmosphere lead.",
     image: flavorFusionPoster,
+    video: flavorFusionVideo,
     href: "https://flavorfusionn.netlify.app",
   },
   {
