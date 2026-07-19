@@ -8,6 +8,8 @@ import cryptPulseVideo from "./assets/optimized/cryptpulse-showcase.mp4";
 import portrait from "./assets/optimized/ekin-portrait.webp";
 import flavorFusionPoster from "./assets/optimized/flavorfusion.webp";
 import flavorFusionVideo from "./assets/optimized/flavorfusion-showcase.mp4";
+import gothamBooksPoster from "./assets/optimized/gotham-books.webp";
+import gothamBooksVideo from "./assets/optimized/gotham-books-showcase.mp4";
 import hiPexPoster from "./assets/optimized/hipex.webp";
 import hiPexVideo from "./assets/optimized/hipex-showcase.mp4";
 import kinfusionPoster from "./assets/optimized/kinfusion.webp";
@@ -81,6 +83,15 @@ const projects = [
     image: omegaServersPoster,
     video: omegaServersVideo,
     href: "https://omegaservers.netlify.app",
+  },
+  {
+    title: "Gotham Books",
+    category: "Editorial commerce · Full stack",
+    description:
+      "A cinematic independent-bookshop experience that pairs atmospheric storytelling with a complete digital catalogue.",
+    image: gothamBooksPoster,
+    video: gothamBooksVideo,
+    href: "https://github.com/06bisik03/GothamBooks",
   },
 ];
 
