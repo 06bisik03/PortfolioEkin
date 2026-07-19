@@ -9,7 +9,9 @@ import flavorFusionPoster from "./assets/optimized/flavorfusion.webp";
 import hiPexPoster from "./assets/optimized/hipex.webp";
 import hiPexVideo from "./assets/optimized/hipex-showcase.mp4";
 import kinfusionPoster from "./assets/optimized/kinfusion.webp";
+import kinfusionVideo from "./assets/optimized/kinfusion-showcase.mp4";
 import kinosmeticsPoster from "./assets/optimized/kinosmetics.webp";
+import kinosmeticsVideo from "./assets/optimized/kinosmetics-showcase.mp4";
 import opusElitePoster from "./assets/optimized/opuselite-showcase-poster.webp";
 import opusEliteVideo from "./assets/optimized/opuselite-showcase.mp4";
 
@@ -32,18 +34,20 @@ const projects = [
   },
   {
     title: "Kinfusion",
-    category: "Editorial commerce · Frontend",
+    category: "Artisan coffee · Frontend",
     description:
-      "A modern storefront concept pairing strong product hierarchy with an editorial rhythm.",
+      "A composed coffee-house experience built around ritual, provenance, and an editorial sense of calm.",
     image: kinfusionPoster,
+    video: kinfusionVideo,
     href: "https://kinfusion.netlify.app",
   },
   {
     title: "Kinosmetics",
-    category: "Beauty commerce · Experience design",
+    category: "Luxury beauty · Experience design",
     description:
       "A soft, immersive shopping concept built around confident art direction and frictionless browsing.",
     image: kinosmeticsPoster,
+    video: kinosmeticsVideo,
     href: "https://kinosmetics.netlify.app",
   },
   {
