@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import styles from "../Styles/Projects.module.css";
 import HoverVideoPlayer from "react-hover-video-player";
+
+interface VideoPlayerProps {
+  vodLink: string;
+  imgLink: string;
+  projectLink: string;
+}
+
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
   vodLink,
   imgLink,

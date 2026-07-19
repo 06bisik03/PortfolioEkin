@@ -1,25 +1,23 @@
-import styles from "./App.module.css";
-import React from "react";
-import Footer from "./Contact/Footer";
 import ContactMe from "./Contact/ContactMe";
-import Navbar from "./Components/Navbar";
-import { useNavigate} from "react-router";
+import SiteFooter from "./Components/SiteFooter";
+import SiteHeader from "./Components/SiteHeader";
 
-const ContactPage: React.FC = () => {
-    const navigate = useNavigate();
-    const scrollFromContacts = (section: string) => {
-        navigate(`/?scrollTo=${section}`)
-    }
-  return (
-    <>
-      <div className={styles.appContainer}>
-        <Navbar scrollToRef={scrollFromContacts}/>
-        <div className={styles.contentContainer}>
-          <ContactMe />
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
-};
+const ContactPage = () => (
+  <div className="site-shell contact-page">
+    <SiteHeader />
+    <main>
+      <section className="contact-hero">
+        <p className="eyebrow">Contact · New business · Opportunities</p>
+        <h1>Good work starts with<br /><em>a real conversation.</em></h1>
+        <p>
+          Have a working-student role, a product that needs clarity, or an idea worth
+          shaping? Tell me where you are and where you want to go.
+        </p>
+      </section>
+      <ContactMe />
+    </main>
+    <SiteFooter />
+  </div>
+);
+
 export default ContactPage;
