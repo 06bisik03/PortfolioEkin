@@ -1,4 +1,5 @@
 import { type CSSProperties, useEffect, useRef, useState } from "react";
+import { useLanguage } from "../i18n";
 import TechnologyIcon, { type TechnologyId } from "./TechnologyIcon";
 
 export interface ProjectTechnology {
@@ -37,6 +38,7 @@ const ProjectCard = ({
   featured = false,
   technologies,
 }: ProjectCardProps) => {
+  const { t } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoReady, setVideoReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -84,12 +86,12 @@ const ProjectCard = ({
             muted
             loop
             playsInline
-            aria-label={`${title} website preview`}
+            aria-label={`${title} ${t.projectCard.websitePreview}`}
           />
         ) : (
           <img
             src={image}
-            alt={`${title} project interface`}
+            alt={`${title} ${t.projectCard.projectInterface}`}
             loading="lazy"
             decoding="async"
             width="1280"
@@ -104,9 +106,9 @@ const ProjectCard = ({
             className="preview-toggle"
             type="button"
             onClick={togglePreview}
-            aria-label={isPlaying ? `Pause ${title} preview` : `Play ${title} preview`}
+            aria-label={`${isPlaying ? t.projectCard.pauseLabel : t.projectCard.playLabel}: ${title}`}
           >
-            <span>{isPlaying ? "Pause" : "Preview"}</span>
+            <span>{isPlaying ? t.projectCard.pause : t.projectCard.preview}</span>
             <i aria-hidden="true">{isPlaying ? "Ⅱ" : "▶"}</i>
           </button>
         )}
@@ -118,9 +120,9 @@ const ProjectCard = ({
           <h3>{title}</h3>
         </div>
         <p>{description}</p>
-        <div className="project-stack" aria-label={`${title} technology stack`}>
+        <div className="project-stack" aria-label={`${title} ${t.projectCard.stack}`}>
           <div className="project-stack-heading" aria-hidden="true">
-            <span>Build signature</span>
+            <span>{t.projectCard.signature}</span>
             <span>{String(technologies.length).padStart(2, "0")}</span>
           </div>
           <ul>
@@ -132,8 +134,8 @@ const ProjectCard = ({
             ))}
           </ul>
         </div>
-        <a href={href} target="_blank" rel="noreferrer" aria-label={`Visit ${title}`}>
-          Visit project <span aria-hidden="true">↗</span>
+        <a href={href} target="_blank" rel="noreferrer" aria-label={`${t.projectCard.visitLabel} ${title}`}>
+          {t.projectCard.visit} <span aria-hidden="true">↗</span>
         </a>
       </div>
     </article>

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import ProjectCard, { type ProjectCardProps } from "./Components/ProjectCard";
 import SiteFooter from "./Components/SiteFooter";
 import SiteHeader from "./Components/SiteHeader";
+import { localizedPath, type ProjectKey, useLanguage } from "./i18n";
 import codeCoachPoster from "./assets/optimized/codecoach.webp";
 import cryptPulsePoster from "./assets/optimized/cryptpulse.webp";
 import cryptPulseVideo from "./assets/optimized/cryptpulse-showcase.mp4";
@@ -160,7 +161,20 @@ const projects: Array<Omit<ProjectCardProps, "featured" | "number">> = [
   },
 ];
 
+const projectKeys: Array<Exclude<ProjectKey, "opusElite">> = [
+  "cryptPulse",
+  "codeCoach",
+  "kinfusion",
+  "kinosmetics",
+  "flavorFusion",
+  "hiPex",
+  "omegaServers",
+  "gothamBooks",
+];
+
 const HomePage = () => {
+  const { language, t } = useLanguage();
+
   useEffect(() => {
     const revealItems = document.querySelectorAll<HTMLElement>("[data-reveal]");
     const observer = new IntersectionObserver(
@@ -208,27 +222,24 @@ const HomePage = () => {
       <main>
         <section className="hero" id="home">
           <div className="hero-copy">
-            <p className="eyebrow hero-eyebrow">Software engineer · Aachen, Germany</p>
+            <p className="eyebrow hero-eyebrow">{t.home.hero.eyebrow}</p>
             <h1>
-              <span>Digital products,</span>
-              <span className="serif-italic">composed with intent.</span>
+              <span>{t.home.hero.titleLead}</span>
+              <span className="serif-italic">{t.home.hero.titleAccent}</span>
             </h1>
-            <p className="hero-lede">
-              I design and engineer polished web experiences where precise systems meet
-              tactile interaction.
-            </p>
+            <p className="hero-lede">{t.home.hero.lede}</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
-                Explore selected work
+                {t.home.hero.workAction}
                 <span aria-hidden="true">↘</span>
               </a>
-              <a className="text-link" href="/contact">
-                Start a conversation <span aria-hidden="true">↗</span>
+              <a className="text-link" href={localizedPath("/contact", language)}>
+                {t.home.hero.contactAction} <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>
 
-          <div className="hero-portrait" aria-label="Portrait of Baris Ekin Isik">
+          <div className="hero-portrait" aria-label={t.home.hero.portraitLabel}>
             <div className="portrait-kinetic" aria-hidden="true">
               <span className="kinetic-track kinetic-track-outer"><i /></span>
               <span className="kinetic-track kinetic-track-middle"><i /></span>
@@ -247,84 +258,62 @@ const HomePage = () => {
               />
               <span className="portrait-index">01 / 04</span>
             </div>
-            <p className="availability"><span /> Available for working-student roles</p>
+            <p className="availability"><span /> {t.home.hero.availability}</p>
           </div>
 
-          <a className="scroll-cue" href="#about" aria-label="Scroll to profile">
-            <span>Scroll</span>
+          <a className="scroll-cue" href="#about" aria-label={t.home.hero.scrollLabel}>
+            <span>{t.home.hero.scroll}</span>
             <i aria-hidden="true" />
           </a>
         </section>
 
         <section className="profile section" id="about">
           <div className="section-heading" data-reveal>
-            <p className="eyebrow">01 · Profile</p>
-            <p className="section-note">Engineering with a product instinct.</p>
+            <p className="eyebrow">{t.home.profile.label}</p>
+            <p className="section-note">{t.home.profile.note}</p>
           </div>
 
           <div className="profile-statement" data-reveal>
             <h2>
-              The best digital work feels <em>inevitable</em> — clear in purpose, exact in
-              execution, and effortless to use.
+              {t.home.profile.statementLead}<em>{t.home.profile.statementAccent}</em>
+              {t.home.profile.statementTail}
             </h2>
           </div>
 
           <div className="profile-grid">
             <div className="profile-copy" data-reveal>
-              <p>
-                I’m a computer science student and full-stack developer building thoughtful
-                products with TypeScript, React, Next.js, Node.js, and modern data systems.
-              </p>
-              <p>
-                My work moves comfortably from interface detail to application architecture.
-                I care about the invisible parts too: performance, accessibility, maintainable
-                systems, and the small decisions that make a product feel considered.
-              </p>
-              <a className="text-link" href="#story">More about my path <span>↓</span></a>
+              {t.home.profile.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              <a className="text-link" href="#story">{t.home.profile.more} <span>↓</span></a>
             </div>
 
             <div className="profile-metrics" data-reveal>
-              <div>
-                <strong>5+</strong>
-                <span>Years building independently</span>
-              </div>
-              <div>
-                <strong>1.5+</strong>
-                <span>Years professional experience</span>
-              </div>
-              <div>
-                <strong>360°</strong>
-                <span>Product thinking, frontend to backend</span>
-              </div>
+              {t.home.profile.metrics.map((metric) => (
+                <div key={metric.value}>
+                  <strong>{metric.value}</strong>
+                  <span>{metric.label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         <section className="expertise section-dark" id="expertise">
           <div className="section-heading" data-reveal>
-            <p className="eyebrow">02 · Expertise</p>
-            <p className="section-note">A small, sharp toolkit — used deeply.</p>
+            <p className="eyebrow">{t.home.expertise.label}</p>
+            <p className="section-note">{t.home.expertise.note}</p>
           </div>
 
           <div className="expertise-list">
-            <article data-reveal>
-              <span>01</span>
-              <h3>Product-minded engineering</h3>
-              <p>From early product logic to production-ready React and Next.js systems.</p>
-            </article>
-            <article data-reveal>
-              <span>02</span>
-              <h3>Interface & interaction</h3>
-              <p>Responsive, accessible interfaces with motion that supports the experience.</p>
-            </article>
-            <article data-reveal>
-              <span>03</span>
-              <h3>Backend & data</h3>
-              <p>Node.js APIs, authentication, SQL and NoSQL data built for clarity and scale.</p>
-            </article>
+            {t.home.expertise.items.map((item, index) => (
+              <article data-reveal key={item.title}>
+                <span>0{index + 1}</span>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            ))}
           </div>
 
-          <div className="tech-marquee" aria-label="Technology stack">
+          <div className="tech-marquee" aria-label={t.home.expertise.stackLabel}>
             <div>
               <span>TypeScript</span><i>✦</i><span>React</span><i>✦</i><span>Next.js</span>
               <i>✦</i><span>Node.js</span><i>✦</i><span>Express</span><i>✦</i>
@@ -338,15 +327,15 @@ const HomePage = () => {
 
         <section className="work section" id="work">
           <div className="section-heading" data-reveal>
-            <p className="eyebrow">03 · Selected work</p>
-            <p className="section-note">Interfaces with atmosphere and purpose.</p>
+            <p className="eyebrow">{t.home.work.label}</p>
+            <p className="section-note">{t.home.work.note}</p>
           </div>
 
           <div className="featured-project" data-reveal>
             <ProjectCard
               title="OpusElite"
-              category="Luxury tailoring · Full-stack commerce"
-              description="A cinematic tailoring experience built around craft, restraint, and the ritual of choosing something made to last."
+              category={t.home.work.projects.opusElite.category}
+              description={t.home.work.projects.opusElite.description}
               image={opusElitePoster}
               video={opusEliteVideo}
               href="https://opuselite.netlify.app/"
@@ -367,7 +356,12 @@ const HomePage = () => {
           <div className="project-grid">
             {projects.map((project, index) => (
               <div data-reveal key={project.title}>
-                <ProjectCard {...project} number={String(index + 2).padStart(2, "0")} />
+                <ProjectCard
+                  {...project}
+                  category={t.home.work.projects[projectKeys[index]].category}
+                  description={t.home.work.projects[projectKeys[index]].description}
+                  number={String(index + 2).padStart(2, "0")}
+                />
               </div>
             ))}
           </div>
@@ -375,38 +369,29 @@ const HomePage = () => {
 
         <section className="story section" id="story">
           <div className="section-heading" data-reveal>
-            <p className="eyebrow">04 · Story</p>
-            <p className="section-note">Curiosity became a craft.</p>
+            <p className="eyebrow">{t.home.story.label}</p>
+            <p className="section-note">{t.home.story.note}</p>
           </div>
 
           <div className="story-layout">
-            <h2 data-reveal>It started with the shortest path home.</h2>
+            <h2 data-reveal>{t.home.story.title}</h2>
             <div className="story-copy" data-reveal>
-              <p>
-                In high school, an IT teacher drew Dijkstra’s algorithm on a smartboard. The
-                route it found between two points was the exact route I walked home every day.
-                I needed to understand how that was possible — and I never really stopped.
-              </p>
-              <p>
-                Since then, I’ve contributed to production work including Cinemo’s corporate
-                contact experience, built complete products of my own, and learned to treat
-                technology as both an engineering discipline and a creative medium.
-              </p>
-              <p>
-                Away from the screen, I write and produce music in Cubase and FL Studio. The
-                same instinct carries across both practices: listen closely, remove what is
-                unnecessary, and make every layer earn its place.
-              </p>
+              {t.home.story.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             </div>
           </div>
         </section>
 
         <section className="contact-band">
           <div className="contact-band-orbit" aria-hidden="true" />
-          <p className="eyebrow" data-reveal>Have a role, project, or idea?</p>
-          <h2 data-reveal>Let’s make something<br /><em>remarkable.</em></h2>
-          <a className="round-link" href="/contact" aria-label="Open contact page" data-reveal>
-            <span>Start a<br />conversation</span><i>↗</i>
+          <p className="eyebrow" data-reveal>{t.home.contactBand.eyebrow}</p>
+          <h2 data-reveal>{t.home.contactBand.titleLead}<br /><em>{t.home.contactBand.titleAccent}</em></h2>
+          <a
+            className="round-link"
+            href={localizedPath("/contact", language)}
+            aria-label={t.home.contactBand.linkLabel}
+            data-reveal
+          >
+            <span>{t.home.contactBand.link}</span><i>↗</i>
           </a>
         </section>
       </main>

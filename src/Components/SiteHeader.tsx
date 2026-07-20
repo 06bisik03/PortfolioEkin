@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { localizedPath, useLanguage } from "../i18n";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const navItems = [
-  { label: "Profile", hash: "about" },
-  { label: "Expertise", hash: "expertise" },
-  { label: "Work", hash: "work" },
-  { label: "Story", hash: "story" },
+  { hash: "about" },
+  { hash: "expertise" },
+  { hash: "work" },
+  { hash: "story" },
 ];
 
 const SiteHeader = () => {
   const { pathname } = useLocation();
+  const { language, t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -29,12 +32,13 @@ const SiteHeader = () => {
     };
   }, [menuOpen]);
 
-  const homeHref = (hash: string) => `${pathname === "/" ? "" : "/"}#${hash}`;
+  const homeHref = (hash: string) =>
+    pathname === "/" ? `#${hash}` : localizedPath("/", language, `#${hash}`);
 
   return (
     <header className={`site-header${scrolled ? " is-scrolled" : ""}${menuOpen ? " menu-open" : ""}`}>
       <div className="scroll-progress" aria-hidden="true" />
-      <Link className="brand" to="/" aria-label="Baris Ekin Isik — Home">
+      <Link className="brand" to={localizedPath("/", language)} aria-label={t.header.homeLabel}>
         <span className="brand-mark">BEI</span>
         <span className="brand-name">Baris Ekin<br />Isik</span>
       </Link>
@@ -46,18 +50,23 @@ const SiteHeader = () => {
         aria-controls="site-navigation"
         onClick={() => setMenuOpen((open) => !open)}
       >
-        <span>{menuOpen ? "Close" : "Menu"}</span>
+        <span>{menuOpen ? t.header.close : t.header.menu}</span>
         <i aria-hidden="true" />
       </button>
 
       <nav id="site-navigation" className={menuOpen ? "is-open" : ""}>
         {navItems.map((item, index) => (
           <a key={item.hash} href={homeHref(item.hash)} onClick={() => setMenuOpen(false)}>
-            <span>0{index + 1}</span>{item.label}
+            <span>0{index + 1}</span>{t.header.nav[index]}
           </a>
         ))}
-        <Link className="nav-contact" to="/contact" onClick={() => setMenuOpen(false)}>
-          Let’s talk <span aria-hidden="true">↗</span>
+        <LanguageSwitcher />
+        <Link
+          className="nav-contact"
+          to={localizedPath("/contact", language)}
+          onClick={() => setMenuOpen(false)}
+        >
+          {t.header.contact} <span aria-hidden="true">↗</span>
         </Link>
       </nav>
     </header>
