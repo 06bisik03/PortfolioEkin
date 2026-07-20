@@ -446,7 +446,7 @@ export const translations = {
       hero: {
         eyebrow: "Yazılım mühendisi · Aachen, Almanya",
         titleLead: "Dijital ürünler,",
-        titleAccent: "niyetle tasarlandı.",
+        titleAccent: "niyetle tasarlanan.",
         lede:
           "Hassas sistemlerin dokunsal etkileşimle buluştuğu, rafine web deneyimleri tasarlıyor ve geliştiriyorum.",
         workAction: "Seçili projeleri keşfet",
