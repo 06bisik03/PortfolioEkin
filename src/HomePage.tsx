@@ -297,9 +297,12 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section className="expertise section-dark" id="expertise">
-          <div className="section-heading" data-reveal>
-            <p className="eyebrow">{t.home.expertise.label}</p>
+        <section className="expertise section-dark" id="expertise" aria-labelledby="expertise-title">
+          <div className="section-heading expertise-heading" data-reveal>
+            <div className="expertise-title-lockup">
+              <span className="expertise-section-number" aria-hidden="true">02</span>
+              <h2 id="expertise-title">{t.home.expertise.title}</h2>
+            </div>
             <p className="section-note">{t.home.expertise.note}</p>
           </div>
 

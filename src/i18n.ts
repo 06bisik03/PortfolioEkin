@@ -72,7 +72,7 @@ export const translations = {
         ],
       },
       expertise: {
-        label: "02 · Expertise",
+        title: "Expertise",
         note: "A small, sharp toolkit — used deeply.",
         stackLabel: "Technology stack",
         items: [
@@ -273,7 +273,7 @@ export const translations = {
         ],
       },
       expertise: {
-        label: "02 · Expertise",
+        title: "Expertise",
         note: "Ein fokussiertes Toolkit — mit Tiefe eingesetzt.",
         stackLabel: "Technologie-Stack",
         items: [
@@ -474,7 +474,7 @@ export const translations = {
         ],
       },
       expertise: {
-        label: "02 · Uzmanlık",
+        title: "Uzmanlık",
         note: "Küçük ve keskin bir araç seti — derinlemesine kullanılır.",
         stackLabel: "Teknoloji yığını",
         items: [
@@ -675,7 +675,7 @@ export const translations = {
         ],
       },
       expertise: {
-        label: "02 · Expertiză",
+        title: "Expertiză",
         note: "Un set restrâns și precis de instrumente — folosit în profunzime.",
         stackLabel: "Tehnologii",
         items: [
