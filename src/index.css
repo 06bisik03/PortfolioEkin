@@ -263,6 +263,12 @@ video {
   background: transparent;
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
 .language-switcher {
   --language-index: 0;
   --language-active: var(--ink);
@@ -270,7 +276,7 @@ video {
   position: relative;
   isolation: isolate;
   display: grid;
-  width: 9.8rem;
+  width: 9.2rem;
   height: 2.45rem;
   padding: 3px;
   grid-template-columns: repeat(4, 1fr);
@@ -321,14 +327,26 @@ video {
   border: 0;
   border-radius: 999px;
   cursor: pointer;
-  font-size: 0.54rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 1rem;
+  line-height: 1;
   transition: color 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .language-switcher button[aria-checked="true"] { color: var(--language-active-text); }
 .language-switcher button:hover { transform: translateY(-1px); }
+
+.language-switcher button span {
+  display: block;
+  filter: saturate(0.82);
+  transform: translateY(-0.02rem);
+  transition: filter 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.language-switcher button:hover span,
+.language-switcher button[aria-checked="true"] span {
+  filter: saturate(1.08);
+  transform: translateY(-0.08rem) scale(1.08);
+}
 
 .contact-page .language-switcher,
 .not-found-page .language-switcher,
@@ -336,6 +354,48 @@ video {
   --language-active: var(--champagne);
   --language-active-text: var(--ink);
   background: rgba(16, 18, 17, 0.18);
+}
+
+.theme-toggle {
+  position: relative;
+  display: grid;
+  width: 2.45rem;
+  height: 2.45rem;
+  flex: 0 0 auto;
+  padding: 0;
+  place-items: center;
+  overflow: hidden;
+  color: currentColor;
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 0.4s ease, background 0.4s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-toggle:hover {
+  color: var(--ivory);
+  background: var(--ink);
+  transform: rotate(12deg);
+}
+
+.theme-toggle svg {
+  position: absolute;
+  width: 0.95rem;
+  height: 0.95rem;
+  transition: opacity 0.45s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-toggle .theme-sun,
+.theme-toggle[data-theme="night"] .theme-moon {
+  opacity: 0;
+  transform: scale(0.45) rotate(-90deg);
+}
+
+.theme-toggle .theme-moon,
+.theme-toggle[data-theme="night"] .theme-sun {
+  opacity: 1;
+  transform: scale(1) rotate(0);
 }
 
 .menu-toggle {
@@ -982,6 +1042,17 @@ video {
   margin-left: clamp(1.25rem, 6vw, 7.2rem);
 }
 
+.expertise > .section-heading .eyebrow,
+.expertise > .section-heading .section-note {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2vw, 2.1rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  text-transform: none;
+}
+
 .expertise-list {
   margin: 0 clamp(1.25rem, 6vw, 7.2rem);
   border-top: 1px solid rgba(241, 237, 229, 0.16);
@@ -998,8 +1069,9 @@ video {
 
 .expertise-list article > span {
   color: var(--champagne);
-  font-size: 0.65rem;
-  letter-spacing: 0.14em;
+  font-family: var(--serif);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
 }
 
 .expertise-list h3 {
@@ -1795,10 +1867,198 @@ video {
   color: rgba(241, 237, 229, 0.6);
 }
 
+/* Black and gold night theme */
+html[data-theme="night"] {
+  --ink: #000;
+  --ink-soft: #000;
+  --ivory: #d4af37;
+  --paper: #050505;
+  --champagne: #d4af37;
+  --muted: #a88a36;
+  --line: rgba(212, 175, 55, 0.24);
+  color: var(--ivory);
+  background: #000;
+  color-scheme: dark;
+}
+
+html[data-theme="night"] body,
+html[data-theme="night"] .site-shell,
+html[data-theme="night"] .work,
+html[data-theme="night"] .story,
+html[data-theme="night"] .contact-page,
+html[data-theme="night"] .not-found-page {
+  color: var(--ivory);
+  background: #000;
+}
+
+html[data-theme="night"] .site-header { color: var(--ivory); }
+
+html[data-theme="night"] ::selection {
+  color: #000;
+  background: var(--champagne);
+}
+
+html[data-theme="night"] .site-header.is-scrolled,
+html[data-theme="night"] .contact-page .site-header.is-scrolled,
+html[data-theme="night"] .not-found-page .site-header.is-scrolled {
+  color: var(--ivory);
+  border-bottom-color: rgba(212, 175, 55, 0.2);
+  background: rgba(0, 0, 0, 0.9);
+}
+
+html[data-theme="night"] .nav-contact {
+  color: var(--ivory);
+  background: #000;
+  border-color: var(--champagne);
+}
+
+html[data-theme="night"] .nav-contact:hover,
+html[data-theme="night"] .contact-page .nav-contact,
+html[data-theme="night"] .not-found-page .nav-contact {
+  color: #000;
+  background: var(--champagne);
+  border-color: var(--champagne);
+}
+
+html[data-theme="night"] .contact-page .nav-contact:hover,
+html[data-theme="night"] .not-found-page .nav-contact:hover {
+  color: var(--ivory);
+  background: #000;
+}
+
+html[data-theme="night"] .language-switcher,
+html[data-theme="night"] .contact-page .language-switcher,
+html[data-theme="night"] .not-found-page .language-switcher {
+  --language-active: var(--champagne);
+  --language-active-text: #000;
+  color: var(--ivory);
+  background: #000;
+  border-color: rgba(212, 175, 55, 0.62);
+}
+
+html[data-theme="night"] .theme-toggle {
+  color: var(--ivory);
+  background: #000;
+  border-color: rgba(212, 175, 55, 0.62);
+}
+
+html[data-theme="night"] .theme-toggle:hover {
+  color: #000;
+  background: var(--champagne);
+}
+
+html[data-theme="night"] .hero::after,
+html[data-theme="night"] .portrait-frame,
+html[data-theme="night"] .project-media {
+  background: #050505;
+}
+
+html[data-theme="night"] .hero::after {
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+  border-left: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+html[data-theme="night"] .portrait-frame img {
+  filter: saturate(0.58) sepia(0.12) contrast(1.08);
+}
+
+html[data-theme="night"] .hero-lede,
+html[data-theme="night"] .availability,
+html[data-theme="night"] .profile-copy > p,
+html[data-theme="night"] .profile-metrics span,
+html[data-theme="night"] .expertise-list article > p,
+html[data-theme="night"] .project-info > p,
+html[data-theme="night"] .story-copy p,
+html[data-theme="night"] .contact-hero > p:last-child,
+html[data-theme="night"] .not-found-copy > p:not(.eyebrow),
+html[data-theme="night"] .form-status {
+  color: rgba(212, 175, 55, 0.7);
+}
+
+html[data-theme="night"] .section-dark,
+html[data-theme="night"] .contact-band {
+  color: var(--ivory);
+  background: #000;
+}
+
+html[data-theme="night"] .section-dark .section-heading,
+html[data-theme="night"] .expertise-list,
+html[data-theme="night"] .expertise-list article,
+html[data-theme="night"] .contact-form-section,
+html[data-theme="night"] .contact-form-section form > label:not(.honeypot) {
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+html[data-theme="night"] .section-dark .section-note,
+html[data-theme="night"] .contact-details span,
+html[data-theme="night"] .contact-form-section label > span,
+html[data-theme="night"] .contact-form-section input::placeholder,
+html[data-theme="night"] .contact-form-section textarea::placeholder {
+  color: rgba(212, 175, 55, 0.48);
+}
+
+html[data-theme="night"] .button-primary {
+  color: var(--ivory);
+  background: #000;
+  border-color: var(--champagne);
+}
+
+html[data-theme="night"] .button-primary:hover {
+  color: #000;
+  background: var(--champagne);
+}
+
+html[data-theme="night"] .preview-toggle,
+html[data-theme="night"] .round-link,
+html[data-theme="night"] .button-light {
+  color: #000;
+  background: var(--champagne);
+}
+
+html[data-theme="night"] .project-number {
+  color: var(--ivory);
+  border-color: rgba(212, 175, 55, 0.7);
+}
+
+html[data-theme="night"] .project-stack,
+html[data-theme="night"] .project-stack-heading {
+  color: rgba(212, 175, 55, 0.52);
+  border-color: rgba(212, 175, 55, 0.22);
+}
+
+html[data-theme="night"] .project-stack li {
+  color: rgba(212, 175, 55, 0.82);
+  background: rgba(212, 175, 55, 0.07);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+html[data-theme="night"] .project-stack li:hover {
+  color: #000;
+  background: var(--champagne);
+  border-color: var(--champagne);
+}
+
+html[data-theme="night"] .scroll-cue i::after { background: var(--champagne); }
+html[data-theme="night"] .contact-form-section select option { color: var(--ivory); background: #000; }
+html[data-theme="night"] .form-status.success,
+html[data-theme="night"] .form-status.error { color: var(--champagne); }
+html[data-theme="night"] .not-found-code { -webkit-text-stroke-color: rgba(212, 175, 55, 0.3); }
+
+body,
+.site-shell,
+.work,
+.story,
+.section-dark,
+.contact-band,
+.site-footer,
+.hero::after {
+  transition: color 0.65s ease, background-color 0.65s ease, border-color 0.65s ease;
+}
+
 @media (max-width: 1080px) {
   .site-header nav { gap: 0.9rem; }
   .site-header nav > a { font-size: 0.64rem; }
-  .language-switcher { width: 8.8rem; }
+  .language-switcher { width: 8.4rem; }
 
   .hero {
     padding-right: 3rem;
@@ -1906,16 +2166,21 @@ video {
     border: 0;
   }
 
-  .site-header nav .language-switcher {
+  .site-header nav .header-controls {
     width: min(100%, 24rem);
-    min-height: 2.8rem;
     margin-top: 1.5rem;
-    flex: 0 0 auto;
     align-self: flex-start;
+  }
+
+  .site-header nav .language-switcher {
+    width: 100%;
+    min-height: 2.8rem;
+    flex: 0 0 auto;
     border-color: rgba(241, 237, 229, 0.42);
   }
 
-  .site-header nav .language-switcher button { font-size: 0.62rem; }
+  .site-header nav .language-switcher button { font-size: 1.08rem; }
+  .site-header nav .theme-toggle { width: 2.8rem; height: 2.8rem; }
 
   .hero {
     min-height: auto;

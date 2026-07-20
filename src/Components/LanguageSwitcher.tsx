@@ -14,7 +14,7 @@ const LanguageSwitcher = () => {
       aria-label={t.header.languageLabel}
     >
       <span className="language-indicator" aria-hidden="true" />
-      {languages.map(({ code, short, name }) => (
+      {languages.map(({ code, flag, name }) => (
         <button
           key={code}
           type="button"
@@ -24,7 +24,7 @@ const LanguageSwitcher = () => {
           title={name}
           onClick={() => setLanguage(code)}
         >
-          {short}
+          <span aria-hidden="true">{flag}</span>
         </button>
       ))}
     </div>

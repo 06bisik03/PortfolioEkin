@@ -305,8 +305,8 @@ const HomePage = () => {
 
           <div className="expertise-list">
             {t.home.expertise.items.map((item, index) => (
-              <article data-reveal key={item.title}>
-                <span>0{index + 1}</span>
+              <article data-reveal key={`expertise-${index}`}>
+                <span>02.{index + 1}</span>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </article>

@@ -14,13 +14,13 @@ export type ProjectKey =
 
 export const languages: ReadonlyArray<{
   code: Language;
-  short: string;
+  flag: string;
   name: string;
 }> = [
-  { code: "en", short: "EN", name: "English" },
-  { code: "de", short: "DE", name: "Deutsch" },
-  { code: "tr", short: "TR", name: "Türkçe" },
-  { code: "ro", short: "RO", name: "Română" },
+  { code: "en", flag: "🇬🇧", name: "English" },
+  { code: "de", flag: "🇩🇪", name: "Deutsch" },
+  { code: "tr", flag: "🇹🇷", name: "Türkçe" },
+  { code: "ro", flag: "🇷🇴", name: "Română" },
 ];
 
 export const translations = {
@@ -35,6 +35,8 @@ export const translations = {
       menu: "Menu",
       close: "Close",
       languageLabel: "Choose language",
+      enableNight: "Activate night mode",
+      enableDay: "Activate day mode",
       nav: ["Profile", "Expertise", "Work", "Story"],
       contact: "Let’s talk",
     },
@@ -234,6 +236,8 @@ export const translations = {
       menu: "Menü",
       close: "Schließen",
       languageLabel: "Sprache wählen",
+      enableNight: "Nachtmodus aktivieren",
+      enableDay: "Tagmodus aktivieren",
       nav: ["Profil", "Expertise", "Projekte", "Werdegang"],
       contact: "Kontakt",
     },
@@ -433,6 +437,8 @@ export const translations = {
       menu: "Menü",
       close: "Kapat",
       languageLabel: "Dil seçin",
+      enableNight: "Gece modunu aç",
+      enableDay: "Gündüz modunu aç",
       nav: ["Profil", "Uzmanlık", "Projeler", "Hikâye"],
       contact: "Konuşalım",
     },
@@ -632,6 +638,8 @@ export const translations = {
       menu: "Meniu",
       close: "Închide",
       languageLabel: "Alege limba",
+      enableNight: "Activează modul de noapte",
+      enableDay: "Activează modul de zi",
       nav: ["Profil", "Expertiză", "Proiecte", "Poveste"],
       contact: "Să vorbim",
     },

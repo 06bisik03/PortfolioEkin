@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { localizedPath, useLanguage } from "../i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { hash: "about" },
@@ -60,7 +61,10 @@ const SiteHeader = () => {
             <span>0{index + 1}</span>{t.header.nav[index]}
           </a>
         ))}
-        <LanguageSwitcher />
+        <div className="header-controls">
+          <LanguageSwitcher />
+          <ThemeToggle />
+        </div>
         <Link
           className="nav-contact"
           to={localizedPath("/contact", language)}
